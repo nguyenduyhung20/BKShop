@@ -10,7 +10,7 @@
 
 <body>
     <h1>Login</h1>
-    <form action="login_process.php" method="post">
+    <form action="../controllers/login_process.php" method="post">
         <label for="username">Username:</label>
         <input type="text" name="username" id="username" required>
         <br>
@@ -18,7 +18,9 @@
         <input type="password" name="password" id="password" required>
         <br>
         <button type="submit">Login</button>
+
     </form>
+    <a href="register.php"><button>Sign up</button> </a>
 </body>
 
 </html>

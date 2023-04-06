@@ -63,13 +63,13 @@ class UserManager {
 
         try {
             // SQL injection baby
-            $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (:username, :email, :password)");
+            $stmt = $this->conn->prepare("INSERT INTO users (username, email, password) VALUES (:username, :email, :password)");
             $stmt->bindParam(':username', $username);
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':password', $hashed_password);
     
             if ($stmt->execute()) {
-                header("Location: login.php");
+                header("Location: ../views/login.php");
                 exit();
             } else {
                 throw new Exception("Error: " . implode(" - ", $stmt->errorInfo()));

@@ -1,6 +1,6 @@
 <?php 
 session_start();
-require_once 'config.php';
+require_once '../config/config.php';
 require_once 'UserManager.php';
 
 /**
@@ -28,7 +28,7 @@ if ($username && $password) {
         $_SESSION['username'] = $user['username'];
         $_SESSION['user_role'] = $user['role'];
 
-        header('Location: dashboard.php');
+        header('Location: ../views/dashboard.php');
         exit();
     } else {
         echo "Invalid credentials. Please try again.";
