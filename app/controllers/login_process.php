@@ -1,7 +1,7 @@
 <?php 
 session_start();
 require_once '../config/config.php';
-require_once 'UserManager.php';
+require_once '../models/UserAuthenticator.php';
 
 /**
  * Sanitize input data
@@ -16,11 +16,12 @@ function validate_input($data) {
     return $data;
 }
 
+// XSS (Cross-site Scripting) attacks
 $username = validate_input($_POST['username']);
 $password = validate_input($_POST['password']);
 
 if ($username && $password) {
-    $userAuth = new UserManager($conn);
+    $userAuth = new UserAuthenticator($conn);
     $user = $userAuth->authenticate($username, $password);
 
     if ($user) {
