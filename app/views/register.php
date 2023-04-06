@@ -10,7 +10,7 @@
 
 <body>
     <h1></h1>
-    <form action="register_process.php" method="post">
+    <form action="../controllers/register_process.php" method="post">
         <label for="username">
             Username:
         </label>
