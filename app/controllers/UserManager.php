@@ -16,6 +16,7 @@ class UserManager {
      */
     public function authenticate($username_email, $password) {
         try {
+            // SQL injection baby
             $sql = "SELECT * FROM users WHERE username = :username_email OR email = :username_email";
             $stmt = $this->conn->prepare($sql);
             $stmt->bindParam(":username_email", $username_email, PDO::PARAM_STR);
@@ -63,7 +64,8 @@ class UserManager {
 
         try {
             // SQL injection baby
-            $stmt = $this->conn->prepare("INSERT INTO users (username, email, password) VALUES (:username, :email, :password)");
+            $sql = "INSERT INTO users (username, email, password) VALUES (:username, :email, :password)";
+            $stmt = $this->conn->prepare($sql);
             $stmt->bindParam(':username', $username);
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':password', $hashed_password);

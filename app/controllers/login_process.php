@@ -16,6 +16,7 @@ function validate_input($data) {
     return $data;
 }
 
+// XSS (Cross-site Scripting) attacks
 $username = validate_input($_POST['username']);
 $password = validate_input($_POST['password']);
 
