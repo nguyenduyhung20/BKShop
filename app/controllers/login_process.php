@@ -1,7 +1,7 @@
 <?php 
 session_start();
 require_once '../config/config.php';
-require_once 'UserAccountManager.php';
+require_once '../models/UserAuthenticator.php';
 
 /**
  * Sanitize input data
@@ -21,7 +21,7 @@ $username = validate_input($_POST['username']);
 $password = validate_input($_POST['password']);
 
 if ($username && $password) {
-    $userAuth = new UserAccountManager($conn);
+    $userAuth = new UserAuthenticator($conn);
     $user = $userAuth->authenticate($username, $password);
 
     if ($user) {

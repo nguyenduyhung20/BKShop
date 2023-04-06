@@ -1,6 +1,6 @@
 <?php
 require_once '../config/config.php';
-require_once 'UserAccountManager.php';
+require_once '../models/UserAuthenticator.php';
 
 /**
  * Sanitize input data
@@ -21,7 +21,7 @@ $email = filter_var(validate_input($_POST['email']), FILTER_VALIDATE_EMAIL);
 $password = validate_input($_POST['password']);
 
 if ($username && $email && $password) {
-    $userRegistration = new UserAccountManager($conn);
+    $userRegistration = new UserAuthenticator($conn);
     $result = $userRegistration->register($username, $email, $password);
     if ($result) {
         echo $result;
