@@ -13,16 +13,16 @@ BKShop is an online computer gear store, built using PHP 7.0+, HTML5/CSS3, JavaS
 
 ## Pages
 
-- Home (hoàn thành được thanh task bar)
-- About (chưa làm)
-- Services/Product Info (chưa làm)
-- Pricing (chưa làm)
-- Contact (figma chưa thấy nha)
-- News (figma chưa thấy nha)
-- Registration (complete)
-- Login (complete)
-- Cart (chưa làm)
-- Payment info (chưa làm)
+- Home 
+- About 
+- Services/Product Info 
+- Pricing 
+- Contact 
+- News 
+- Registration
+- Login
+- Cart
+- Payment info
 
 ## Technologies
 
