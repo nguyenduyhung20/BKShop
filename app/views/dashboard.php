@@ -1,10 +1,14 @@
 <?php 
-session_start();
+require_once '../models/SessionManager.php';
 
-if (!isset($_SESSION['user_id'])) {
+$sessionManager = new SessionManager();
+
+
+if (!$sessionManager->isLoggedIn()) {
     header("Location: login.php");
     exit;
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +17,7 @@ if (!isset($_SESSION['user_id'])) {
     <title>Dashboard</title>
 </head>
 <body>
-    <h1>Welcome, <?php echo $_SESSION['username']; ?>!</h1>
+    <h1>Welcome, <?php echo $sessionManager->get('username'); ?>!</h1>
     <a href="../controllers/logout.php">Logout</a>
 </body>
 </html>

@@ -10,17 +10,17 @@
 
 <body>
     <h1>Login</h1>
-    <form action="../controllers/login_process.php" method="post">
+    <form action="../../index.php" method="post">
         <label for="username">Username:</label>
         <input type="text" name="username" id="username" required>
         <br>
         <label for="password">Password:</label>
         <input type="password" name="password" id="password" required>
         <br>
-        <button type="submit">Login</button>
+        <button type="submit" name="login" value="Login">Login</button>
 
     </form>
-    <a href="register.php"><button>Sign up</button> </a>
+    <a href="index.php?action=register">Sign up</a>
 </body>
 
 </html>
