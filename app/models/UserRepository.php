@@ -44,6 +44,19 @@ class UserRepository {
         return null;
     }
 
+    public function findByEmail($email) {
+        $sql = "SELECT * FROM users WHERE email = :email";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->execute();
+        $userData = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($userData) {
+            return $this->createUserFromData($userData);
+        }
+        return null;
+    }
+
     private function createUserFromData($data) {
         return new User(
             $data['id'],
@@ -108,6 +121,8 @@ class UserRepository {
         $stmt->execute();
     }
 
+
+    
     public function createUser($username, $firstName, $lastName, $email, $password, $phone, $address, $role){
         $sql = "INSERT INTO users (username, first_name, last_name, email, password, phone, address, role) VALUES (:username, :first_name, :last_name, :email, :password, :phone, :address, :role)";
         $stmt = $this->conn->prepare($sql);

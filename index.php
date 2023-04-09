@@ -44,11 +44,9 @@ if (isset($_POST['register'])) {
     $address = $_POST['address'];
     $role = Role::USER;
 
-    if ($authService->register($username, $firstName, $lastName, $email, $password, $phone, $address, $role)) {
-        echo 'Registration successful';
-    } else {
-        echo 'Registration failed';
-    }
+    $registerResult = $authService->register($username, $firstName, $lastName, $email, $password, $phone, $address, $role);
+    echo $registerResult['message'];
+    
 } elseif (isset($_GET['action']) && $_GET['action'] == 'register') {
     echo 'Button sign up pressed';
     require_once 'app/views/register.php';
