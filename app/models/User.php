@@ -1,4 +1,6 @@
 <?php  
+
+require_once 'RBAC.php';
 class User {
     private $id;
     private $username;
@@ -65,6 +67,29 @@ class User {
     public function getUpdatedAt() {
         return $this->updatedAt;
     }
+
+    public function setRole($role) {
+        if (!Role::isValidRole($role)) {
+            throw new InvalidArgumentException("Invalid role provided");
+        }
+        $this->role = $role;
+    }
+
+    public function toString() {
+        $output = "";
+        $output .= "ID: " . $this->id . "\n";
+        $output .= "Username: " . $this->username . "\n";
+        $output .= "First Name: " . $this->firstName . "\n";
+        $output .= "Last Name: " . $this->lastName . "\n";
+        $output .= "Email: " . $this->email . "\n";
+        $output .= "Phone: " . $this->phone . "\n";
+        $output .= "Address: " . $this->address . "\n";
+        $output .= "Role: " . $this->role . "\n";
+        $output .= "Created At: " . $this->createdAt . "\n";
+        $output .= "Updated At: " . $this->updatedAt . "\n";
+        return $output;
+    }
+    
 }
 
 ?>

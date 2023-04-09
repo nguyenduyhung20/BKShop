@@ -12,11 +12,13 @@ class UserRepository {
     public function findAll() {
         $sql = "SELECT * FROM users";
         $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
         $usersData = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $users = [];
         foreach ($usersData as $userData) {
             $users[] = $this->createUserFromData($userData);
         }
+
         return $users;
     }
 
