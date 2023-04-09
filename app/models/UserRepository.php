@@ -31,6 +31,19 @@ class UserRepository {
         return $this->createUserFromData($userData);
     }
 
+    public function findByUsername($username) {
+        $sql = "SELECT * FROM users WHERE username = :username";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':username', $username, PDO::PARAM_STR);
+        $stmt->execute();
+        $userData = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($userData) {
+            return $this->createUserFromData($userData);
+        }
+        return null;
+    }
+
     private function createUserFromData($data) {
         return new User(
             $data['id'],

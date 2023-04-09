@@ -48,6 +48,10 @@ class User {
         return $this->email;
     }
 
+    public function getPassword() {
+        return $this->password;
+    }
+
     public function getPhone() {
         return $this->phone;
     }

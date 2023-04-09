@@ -14,7 +14,7 @@ class AccessControl {
     public static function hasAccess(User $user, $permission) {
         switch ($permission) {
             case 'view_users':
-                return ($user->getRole() === (Role::ADMIN));
+                return $user->getRole() === (Role::ADMIN);
             case 'edit_users':
                 return $user->getRole() === Role::ADMIN;
             default:
