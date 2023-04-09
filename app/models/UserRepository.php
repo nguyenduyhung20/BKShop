@@ -107,6 +107,22 @@ class UserRepository {
         $stmt->bindParam(':id', $user->getId(), PDO::PARAM_INT);
         $stmt->execute();
     }
+
+    public function createUser($username, $firstName, $lastName, $email, $password, $phone, $address, $role){
+        $sql = "INSERT INTO users (username, first_name, last_name, email, password, phone, address, role) VALUES (:username, :first_name, :last_name, :email, :password, :phone, :address, :role)";
+        $stmt = $this->conn->prepare($sql);
+
+        $stmt->bindParam(':username', $username, PDO::PARAM_STR);
+        $stmt->bindParam(':first_name', $firstName, PDO::PARAM_STR);
+        $stmt->bindParam(':last_name', $lastName, PDO::PARAM_STR);
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->bindParam(':password', $password, PDO::PARAM_STR);
+        $stmt->bindParam(':phone', $phone, PDO::PARAM_STR);
+        $stmt->bindParam(':address', $address, PDO::PARAM_STR);
+        $stmt->bindParam(':role', $role, PDO::PARAM_STR);
+
+        return $stmt->execute();
+    }
 }
 
 

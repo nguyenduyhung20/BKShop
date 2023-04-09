@@ -1,6 +1,8 @@
 <?php 
-require_once '../models/UserRepository.php';
-require_once '../models/SessionManager.php';
+
+require_once 'app/models/UserRepository.php';
+require_once 'app/models/SessionManager.php';
+
 class AuthenticateService {
     private $userRepository;
     private $sessionManager;
@@ -15,10 +17,16 @@ class AuthenticateService {
 
         if ($user && password_verify($password, $user->getPassword())) {
             $this->sessionManager->set('user_id', $user->getId()); 
+            $this->sessionManager->set('username', $user->getUsername()); 
             return true;
         }
 
         return false;
+    }
+
+    public function register($username, $firstName, $lastName, $email, $password, $phone, $address, $role){
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        return $this->userRepository->createUser($username, $firstName, $lastName, $email, $hashedPassword, $phone, $address, $role);
     }
 
     public function logout() {
