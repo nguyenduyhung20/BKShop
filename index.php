@@ -18,6 +18,12 @@ $sessionManager = new SessionManager();
 $userRepository = new UserRepository($conn);
 $authService = new AuthenticateService($userRepository, $sessionManager);
 
+//Redirect user if already loggedin
+if ($authService->isLoggedIn()) {
+    header("Location: app/views/dashboard.php");
+    exit;
+}
+
 if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];

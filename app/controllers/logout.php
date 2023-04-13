@@ -7,5 +7,5 @@ unset($_SESSION['user_id']);
 
 $sessionManager->endSession();
 
-header("Location: ../views/login.php");
+header("Location: ../../index.php");
 ?>
