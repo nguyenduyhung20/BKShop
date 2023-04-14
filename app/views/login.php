@@ -10,7 +10,10 @@
 
 <body>
     <h1>Login</h1>
-    <form action="../../index.php" method="post">
+    <?php if (!empty($errorMessage)): ?>
+        <p><?php echo $errorMessage; ?></p>
+    <?php endif; ?>
+    <form method="post">
         <label for="username">Username:</label>
         <input type="text" name="username" id="username" required>
         <br>
