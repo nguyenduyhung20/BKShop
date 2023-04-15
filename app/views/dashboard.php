@@ -1,14 +1,6 @@
 <?php 
-require_once '../models/SessionManager.php';
 
-$sessionManager = new SessionManager();
-
-
-if (!$sessionManager->isLoggedIn()) {
-    header("Location: login.php");
-    exit;
-}
-
+$user = $sessionManager->get('user');
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +9,12 @@ if (!$sessionManager->isLoggedIn()) {
     <title>Dashboard</title>
 </head>
 <body>
-    <h1>Welcome, <?php echo $sessionManager->get('username'); ?>!</h1>
-    <a href="../controllers/logout.php">Logout</a>
+    <h1>Welcome, <?php echo $user->getUsername(), " "; echo "You are ", $user->getRole() ;?>!</h1>
+    <?php 
+    if ( $user->getRole() == Role::ADMIN) {
+        echo '<a href="index.php?action=view_user">View Users</a>';
+    }
+    ?>
+    <a href="index.php?action=logout">Logout</a>
 </body>
 </html>

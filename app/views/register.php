@@ -9,8 +9,11 @@
 </head>
 
 <body>
-    <h1></h1>
-    <form method="post" action="index.php">
+    <h1>Sign in</h1>
+    <?php if (!empty($errorMessage)): ?>
+        <p><?php echo $errorMessage; ?></p>
+    <?php endif; ?>
+    <form method="post">
         <label for="username">Username:</label>
         <input type="text" name="username" id="username" required>
         <br>

@@ -5,63 +5,43 @@ require_once 'app/models/User.php';
 require_once 'app/models/RBAC.php';
 require_once 'app/services/AuthenticationService.php';
 require_once 'app/models/UserRepository.php';
+require_once 'app/controllers/UserController.php';
+require_once 'app/middlewares/AuthMiddleware.php';
+require_once 'app/controllers/AdminController.php';
 
 
 $sessionManager = new SessionManager();
-
-
-// if (isset($_SESSION['user_id'])) {
-//     header("Location: app/views/dashboard.php");
-// } else {
-//     header("Location: app/views/login.php");
-// }
 $userRepository = new UserRepository($conn);
+$authMiddleware = new AuthMiddleware($sessionManager);
 $authService = new AuthenticateService($userRepository, $sessionManager);
+$userController = new UserController($authService, $userRepository, $sessionManager);
+$adminController = new AdminController($userRepository, $authService, $sessionManager, $authMiddleware);
 
-//Redirect user if already loggedin
-if ($authService->isLoggedIn()) {
-    header("Location: app/views/dashboard.php");
-    exit;
-}
 
-if (isset($_POST['login'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    if ($authService->login($username, $password)) {
-        header("Location: app/views/dashboard.php");
-        exit;
-    } else {
-        echo 'Incorrect username or password';
-    }
-} elseif (isset($_GET['action']) && $_GET['action'] == 'logout') {
-    $authService->logout();
-    echo 'Logged out successfully';
-}
-
-// Check register before log in ?
-if (isset($_POST['register'])) {
-    $username = $_POST['username'];
-    $firstName = $_POST['first_name'];
-    $lastName = $_POST['last_name'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $phone = $_POST['phone'];
-    $address = $_POST['address'];
-    $role = Role::USER;
-
-    $registerResult = $authService->register($username, $firstName, $lastName, $email, $password, $phone, $address, $role);
-    echo $registerResult['message'];
-    
+if (isset($_GET['action']) && $_GET['action'] == 'logout') {
+    $userController->logout();
 } elseif (isset($_GET['action']) && $_GET['action'] == 'register') {
-    echo 'Button sign up pressed';
-    require_once 'app/views/register.php';
+    $userController->register();
+} elseif (isset($_GET['action']) && $_GET['action'] == 'login'){
+    $userController->login();
+} elseif (isset($_GET['action']) && $_GET['action'] == 'dashboard'){
+    require_once 'app/views/dashboard.php';
     exit;
-}
-
-// If not logged in
-if (!$authService->isLoggedIn()) {
-    require_once 'app/views/login.php';
+} elseif (isset($_GET['action']) && $_GET['action'] == 'view_user'){
+    $adminController->index();
+    exit;
+} elseif (isset($_GET['action']) && $_GET['action'] == 'edit_user' && isset($_GET['id'])){
+    $adminController->editUser($_GET['id']);
+    exit;
+} elseif (isset($_GET['action']) && $_GET['action'] == 'update_user' && isset($_GET['id']) && !empty($_POST)){
+    $adminController->updateUser($_GET['id'], $_POST);
+    exit;
+} elseif (isset($_GET['action']) && $_GET['action'] == 'delete_user' && isset($_GET['id'])){
+    $adminController->deleteUser($_GET['id']);
+    exit;
+} else {
+    // Redirect to the homepage
+    require_once 'app/views/homepage.php';
     exit;
 }
 

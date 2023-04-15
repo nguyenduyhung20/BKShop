@@ -16,8 +16,7 @@ class AuthenticateService {
         $user = $this->userRepository->findByUsername($username);
 
         if ($user && password_verify($password, $user->getPassword())) {
-            $this->sessionManager->set('user_id', $user->getId()); 
-            $this->sessionManager->set('username', $user->getUsername()); 
+            $this->sessionManager->set('user', $user);
             return true;
         }
 
@@ -66,16 +65,16 @@ class AuthenticateService {
     }
     
     public function logout() {
-        unset($_SESSION['user_id']);
+        unset($_SESSION['user']);
     }
 
     public function isLoggedIn(){
-        return isset($_SESSION['user_id']);
+        return isset($_SESSION['user']);
     }
 
     public function getLoggedInUser(){
         if ($this->isLoggedIn()) {
-            return $this->userRepository->findById($_SESSION['user_id']);
+            return $_SESSION['user'];
         }
         return null;
     }
