@@ -1,6 +1,6 @@
 
 <h1>Edit User</h1>
-<form action="index.php?action=update_user&id=<?php echo $user->getId(); ?>" method="post">
+<form action="/admin/update/<?php echo $user->getId(); ?>" method="post">
     <label for="username">Username:</label>
     <input type="text" name="username" value="<?php echo $user->getUsername(); ?>"><br>
 

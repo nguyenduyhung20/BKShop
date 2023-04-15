@@ -23,8 +23,8 @@
 		<td><?php echo $user->getPhone(); ?></td>
 		<td><?php echo $user->getAddress(); ?></td>
 		<td><?php echo $user->getRole(); ?></td>
-		<td><a href="index.php?action=edit_user&id=<?php echo $user->getId(); ?>">Edit</a></td>
-		<td><a href="index.php?action=delete_user&id=<?php echo $user->getId(); ?>">Delete</a></td>
+		<td><a href="/admin/edit/<?php echo $user->getId(); ?>">Edit</a></td>
+		<td><a href="/admin/delete/<?php echo $user->getId(); ?>">Delete</a></td>
 		</tr>
 	<?php endforeach; ?>
 </table>

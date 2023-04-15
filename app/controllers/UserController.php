@@ -19,7 +19,7 @@ class UserController {
 
     public function login() {
         if ($this->authService->isLoggedIn()) {
-            header("Location: index.php");
+            header("Location: /");
             exit;
         }
 
@@ -28,7 +28,7 @@ class UserController {
             $password = $_POST['password'];
 
             if ($this->authService->login($username, $password)) {
-                header("Location: index.php");
+                header("Location: /");
                 exit;
             } else {
                 $errorMessage = 'Incorrect username or password';
@@ -40,14 +40,14 @@ class UserController {
     public function logout() {
         if (isset($_GET['action']) && $_GET['action'] == 'logout') {
             $this->authService->logout();
-            header("Location: index.php");
+            header("Location: /");
             exit;
         }
     }
 
     public function register() {
         if ($this->authService->isLoggedIn()) {
-            header("Location: index.php");
+            header("Location: /");
             exit;
         }
 
@@ -66,7 +66,7 @@ class UserController {
             $registerResult = $this->authService->register($username, $firstName, $lastName, $email, $password, $phone, $address, $role);
 
             if ($registerResult['success']) {
-                header("Location: index.php?register=success");
+                header("Location: /");
                 exit;
             } else {
                 $errorMessage = $registerResult['message'];

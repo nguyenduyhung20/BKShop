@@ -50,7 +50,7 @@ class AdminController {
         $user->setRole($data['role']);
 
         $this->userRepository->updateAdmin($user);
-        header("Location: index.php?action=view_user");
+        header("Location: /admin");
         exit;
     }
 
@@ -59,7 +59,7 @@ class AdminController {
 
         $user = $this->userRepository->findById($id);
         $this->userRepository->deleteUser($user);
-        header("Location: index.php?action=view_user");
+        header("Location: /admin");
         exit;
     }
 

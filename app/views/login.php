@@ -23,7 +23,7 @@
         <button type="submit" name="login" value="Login">Login</button>
 
     </form>
-    <a href="index.php?action=register">Sign up</a>
+    <a href="/register">Sign up</a>
 </body>
 
 </html>
