@@ -19,7 +19,7 @@ class UserController {
 
     public function login() {
         if ($this->authService->isLoggedIn()) {
-            header("Location: app/views/dashboard.php");
+            header("Location: index.php");
             exit;
         }
 
@@ -28,7 +28,7 @@ class UserController {
             $password = $_POST['password'];
 
             if ($this->authService->login($username, $password)) {
-                header("Location: app/views/dashboard.php");
+                header("Location: index.php");
                 exit;
             } else {
                 $errorMessage = 'Incorrect username or password';
@@ -47,7 +47,7 @@ class UserController {
 
     public function register() {
         if ($this->authService->isLoggedIn()) {
-            header("Location: app/views/dashboard.php");
+            header("Location: index.php");
             exit;
         }
 

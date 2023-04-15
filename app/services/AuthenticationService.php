@@ -18,6 +18,7 @@ class AuthenticateService {
         if ($user && password_verify($password, $user->getPassword())) {
             $this->sessionManager->set('user_id', $user->getId()); 
             $this->sessionManager->set('username', $user->getUsername()); 
+            $this->sessionManager->set('user', $user);
             return true;
         }
 
@@ -67,6 +68,8 @@ class AuthenticateService {
     
     public function logout() {
         unset($_SESSION['user_id']);
+        unset($_SESSION['username']);
+        unset($_SESSION['user']);
     }
 
     public function isLoggedIn(){
