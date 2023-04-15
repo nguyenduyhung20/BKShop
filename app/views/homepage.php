@@ -8,8 +8,8 @@
     </head>
     <body>
     <h1>Welcome</h1>
-    <a href="index.php?action=login">Login</a>
-    <a href="index.php?action=register">Sign Up</a>
-    <a href="index.php?action=dashboard">Dashboard</a>
+    <a href="/login">Login</a>
+    <a href="/register">Sign Up</a>
+    <a href="/dashboard">Dashboard</a>
     </body>
 </html>

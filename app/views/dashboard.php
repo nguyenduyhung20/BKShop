@@ -12,9 +12,9 @@ $user = $sessionManager->get('user');
     <h1>Welcome, <?php echo $user->getUsername(), " "; echo "You are ", $user->getRole() ;?>!</h1>
     <?php 
     if ( $user->getRole() == Role::ADMIN) {
-        echo '<a href="index.php?action=view_user">View Users</a>';
+        echo '<a href="/admin">View Users</a>';
     }
     ?>
-    <a href="index.php?action=logout">Logout</a>
+    <a href="/logout">Logout</a>
 </body>
 </html>

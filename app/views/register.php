@@ -38,7 +38,7 @@
         <input type="submit" name="register" value="Register">
 
     </form>
-    <a href="index.php">Login</a>
+    <a href="/login">Login</a>
 </body>
 
 </html>

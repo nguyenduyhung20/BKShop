@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# Rewrite URLs for user authentication
+RewriteRule ^logout/?$ index.php?action=logout [L]
+RewriteRule ^register/?$ index.php?action=register [L]
+RewriteRule ^login/?$ index.php?action=login [L]
+
+# Rewrite URLs for admin actions
+RewriteRule ^dashboard/?$ index.php?action=dashboard [L]
+RewriteRule ^admin/?$ index.php?action=view_user [L]
+RewriteRule ^admin/edit/([0-9]+)/?$ index.php?action=edit_user&id=$1 [L]
+RewriteRule ^admin/update/([0-9]+)/?$ index.php?action=update_user&id=$1 [L]
+RewriteRule ^admin/delete/([0-9]+)/?$ index.php?action=delete_user&id=$1 [L]
+
+RewriteRule ^/?$ index.php [L]
