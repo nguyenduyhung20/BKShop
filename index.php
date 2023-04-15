@@ -30,7 +30,16 @@ if (isset($_GET['action']) && $_GET['action'] == 'logout') {
 } elseif (isset($_GET['action']) && $_GET['action'] == 'view_user'){
     $adminController->index();
     exit;
-}else {
+} elseif (isset($_GET['action']) && $_GET['action'] == 'edit_user' && isset($_GET['id'])){
+    $adminController->editUser($_GET['id']);
+    exit;
+} elseif (isset($_GET['action']) && $_GET['action'] == 'update_user' && isset($_GET['id']) && !empty($_POST)){
+    $adminController->updateUser($_GET['id'], $_POST);
+    exit;
+} elseif (isset($_GET['action']) && $_GET['action'] == 'delete_user' && isset($_GET['id'])){
+    $adminController->deleteUser($_GET['id']);
+    exit;
+} else {
     // Redirect to the homepage
     require_once 'app/views/homepage.php';
     exit;

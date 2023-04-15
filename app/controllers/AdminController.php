@@ -23,7 +23,7 @@ class AdminController {
 
     public function index() {
         $this->authMiddleware->checkAdmin();
-        echo "Admin checked";
+
         $users = $this->userRepository->findAll();
         require_once 'app/views/admin/view_user.php';
     }
@@ -32,7 +32,7 @@ class AdminController {
         $this->authMiddleware->checkAdmin();
 
         $user = $this->userRepository->findById($id);
-        require_once "../views/admin/edit_user.php";
+        require_once "app/views/admin/edit_user.php";
     }
 
     
@@ -49,10 +49,9 @@ class AdminController {
         $user->setAddress($data['address']);
         $user->setRole($data['role']);
 
-        $this->userRepository->updateUser($user);
-        header("Location: ../views/admin/view_user.php");
+        $this->userRepository->updateAdmin($user);
+        header("Location: index.php?action=view_user");
         exit;
-
     }
 
     public function deleteUser($id) {
@@ -60,7 +59,7 @@ class AdminController {
 
         $user = $this->userRepository->findById($id);
         $this->userRepository->deleteUser($user);
-        header("Location: ../views/admin/view_user.php");
+        header("Location: index.php?action=view_user");
         exit;
     }
 

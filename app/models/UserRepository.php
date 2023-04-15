@@ -73,7 +73,7 @@ class UserRepository {
         );
     }
 
-    private function updateAdmin(User $user) {
+    public function updateAdmin(User $user) {
         $sql = "UPDATE users SET 
             username = :username, 
             first_name = :first_name, 
@@ -84,14 +84,24 @@ class UserRepository {
             role = :role 
             WHERE id = :id";
         $stmt = $this->conn->prepare($sql);
-        $stmt->bindParam(':id', $user->getId(), PDO::PARAM_INT);
-        $stmt->bindParam(':username', $user->getUsername(), PDO::PARAM_STR);
-        $stmt->bindParam(':first_name', $user->getFirstName(), PDO::PARAM_STR);
-        $stmt->bindParam(':last_name', $user->getLastName(), PDO::PARAM_STR);
-        $stmt->bindParam(':email', $user->getEmail(), PDO::PARAM_STR);
-        $stmt->bindParam(':phone', $user->getPhone(), PDO::PARAM_STR);
-        $stmt->bindParam(':address', $user->getAddress(), PDO::PARAM_STR);
-        $stmt->bindParam(':role', $user->getRole(), PDO::PARAM_STR);
+        
+        $id = $user->getId();
+        $username = $user->getUsername();
+        $first_name = $user->getFirstName();
+        $last_name = $user->getLastName();
+        $email = $user->getEmail();
+        $phone = $user->getPhone();
+        $address = $user->getAddress();
+        $role = $user->getRole();
+
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->bindParam(':username', $username, PDO::PARAM_STR);
+        $stmt->bindParam(':first_name', $first_name, PDO::PARAM_STR);
+        $stmt->bindParam(':last_name', $last_name, PDO::PARAM_STR);
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->bindParam(':phone', $phone, PDO::PARAM_STR);
+        $stmt->bindParam(':address', $address, PDO::PARAM_STR);
+        $stmt->bindParam(':role', $role, PDO::PARAM_STR);
         $stmt->execute();
     }
 
@@ -104,13 +114,22 @@ class UserRepository {
         address = :address
         WHERE id = :id";
 
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bindParam(':id', $user->getId(), PDO::PARAM_INT);
-        $stmt->bindParam(':first_name', $user->getFirstName(), PDO::PARAM_STR);
-        $stmt->bindParam(':last_name', $user->getLastName(), PDO::PARAM_STR);
-        $stmt->bindParam(':email', $user->getEmail(), PDO::PARAM_STR);
-        $stmt->bindParam(':phone', $user->getPhone(), PDO::PARAM_STR);
-        $stmt->bindParam(':address', $user->getAddress(), PDO::PARAM_STR);
+        $stmt = $this->conn->prepare($sql);        
+
+        $id = $user->getId();
+        $firstName = $user->getFirstName();
+        $lastName = $user->getLastName();
+        $email = $user->getEmail();
+        $phone = $user->getPhone();
+        $address = $user->getAddress();
+
+
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->bindParam(':first_name', $firstName, PDO::PARAM_STR);
+        $stmt->bindParam(':last_name', $lastName, PDO::PARAM_STR);
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->bindParam(':phone', $phone, PDO::PARAM_STR);
+        $stmt->bindParam(':address', $address, PDO::PARAM_STR);
         $stmt->execute();
     }
 
