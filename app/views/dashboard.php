@@ -18,6 +18,6 @@ if (!$sessionManager->isLoggedIn()) {
 </head>
 <body>
     <h1>Welcome, <?php echo $sessionManager->get('username'); ?>!</h1>
-    <a href="../controllers/logout.php">Logout</a>
+    <a href="../../index.php?action=logout">Logout</a>
 </body>
 </html>
