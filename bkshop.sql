@@ -71,10 +71,6 @@ INSERT INTO `product` (`id_product`, `id_list`, `name_product`, `image_product`,
 
 
 INSERT INTO `users` (`id`, `username`, `first_name`, `last_name`, `email`, `password`, `phone`, `address`, `role`, `created_at`, `updated_at`) VALUES
-(0, 'DAC NGUYEN', 'DAC', 'NGUYEN', 'dat@dat', '$2y$10$JYhpybrbii0yqD2CN1bk5O1vU8mWKk1okz4IWz3QteR8qMyRM.9Ye', '123', '123 dat', 'ADMIN', '2023-04-14 07:39:26', '2023-04-14 07:46:59'),
-(1, 'dat nguyen van', 'dat', 'nguyen van', 'dat@datnguyen', '$2y$10$vIjfR/LHE/vbhWbpsK74eeetRD4ZmQGb7mT4duH4R/C4Iwa4.78nu', '123456', '1234 dat', 'USER', '2023-04-14 07:47:52', '2023-04-14 07:47:52');
-
-INSERT INTO `users` (`id`, `username`, `first_name`, `last_name`, `email`, `password`, `phone`, `address`, `role`, `created_at`, `updated_at`) VALUES
 (2, 'john_doe2', 'John old', 'Doe', 'john_doe@example.com', 'password123', '+1234567890', '123 Main St, Anytown Myx tho', 'USER', '2023-04-09 09:40:44', '2023-04-15 08:56:19'),
 (3, 'dhung1', 'Hung', 'Duy', 'duyhunqwea2@gmail.com', '$2y$10$txr0X.HMa3VB19CmDd5nvOMmeFw6YD43A.R0BScZBvrd/5vUcGVeG', '0852260051', 'KTX khu A ĐHQG, Linh Trung, Thủ Đức', 'USER', '2023-04-09 13:24:49', '2023-04-09 13:24:49'),
 (4, 'dhung2', 'Hung', 'Duy Hung', 'hung.nguy432@hcmut.edu.vn', '$2y$10$FU2o/o6yWpPuIVZPj/6t1uDbCNqd1rNpSbSmaC4Kf/YVELo5q/WFS', '085226022', 'KTX khu A ĐHQG, Linh Trung, Thủ Đức', 'USER', '2023-04-09 13:27:12', '2023-04-09 13:27:12'),
