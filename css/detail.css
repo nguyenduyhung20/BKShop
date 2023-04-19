@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
+
+.cus_header{
+    height: 60px;	
+	background-color: rgb(25 ,109,236);
+    font-size: 20px;
+    line-height: 60px;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #E9F2F2;
+    overflow-x: hidden;
+    transition: 0.5s;
+    text-align: left;
+}
+  
+.sidenav a {
+    padding: 0 20px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+.cus_header a{
+    text-decoration: none;
+    color: #000000;
+}
+.cus_header form{
+    padding: auto 0;
+    margin: 10px 0;
+    width: 75%;
+}
+.cus_header form input{
+	background: white;
+	border-radius: 45px;
+    border: 1px solid rgb(25 ,109,236);
+}
+.cus_header form button{
+	background: #0066FF;
+	border-radius: 45px;
+}
+.dropdown .dropdown-menu{
+    position: absolute;
+    top: 15px;
+}
+.dropdown .dropdown-menu .dropdown-item{
+    line-height: 30px;
+}
+.cus_navbar{
+    height: 60px;
+    line-height: 30px;
+    padding :15px 0 15px 0;
+    font-size: 16px;
+    text-align: center;
+    border-bottom-width: 1px; /* Độ rộng đường viền phía dưới là 1px */
+    border-bottom-color: rgb(70, 70, 70, 0.844); /* Màu sắc đường viền là màu xanh dương */
+    border-bottom-style: solid;
+}
+.cus_navbar a, .dropbtn{
+    color: #000000;
+    font-weight: 600;
+}
+.cus_navbar a:hover {
+    text-decoration: none;
+    color: blue ;
+}
+.cus_navbar .products{
+    /* background-color: #00DD00; */
+    border: 0.5px solid rgba(70, 70, 70, 0.844);
+    border-radius: 5px;
+    margin-left: 55px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(233, 242, 242);
+  width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+/* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+.cus_navbar .intro, .cus_navbar .contact, .cus_navbar .payment, .cus_navbar .news{
+    border: 0.5px solid rgba(70, 70, 70, 0.844);
+    border-radius: 5px;
+    margin-left: 15px;
+}
+.main-content .list_product{
+    background-color: rgb(233, 242, 242);
+    margin: 10px 0 0 55px;
+    border-radius: 5px;
+}
+.main-content .list_product table tr td{
+    padding: 10px 0;
+}
+.main-content .list_product table tr td a{
+    text-decoration: none;
+    color: #000000;
+    padding: 0 5px;
+    margin-top: 50px;
+}
+.product-name{
+    font-size: 27px;
+    font-weight: bold;
+}
+.product-promote{
+    background-color: rgb(60, 217, 238);
+    border-radius: 8px 8px 0 0;
+    height: 35px;
+    line-height: 35px;
+    font-weight: 600;
+    padding-left: 10px;
+    border-top-width: 1px; /* Độ rộng đường viền phía dưới là 1px */
+    border-top-color: rgba(31, 108, 223, 0.844); /* Màu sắc đường viền là màu xanh dương */
+    border-top-style: solid;
+}
+.product-promote-list li{
+    padding: 5px 0;
+}
+.product-promote-list{
+    border-bottom-width: 0.5px; /* Độ rộng đường viền phía dưới là 1px */
+    border-bottom-color: rgb(70, 70, 70, 0.844); /* Màu sắc đường viền là màu xanh dương */
+    border-bottom-style: solid;
+    border-radius: 0 0 8px 8px;
+}
+.price{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 15px 0;
+}
+.buy-now, .installment1, .installment2{
+    text-align: center;
+    border-radius: 8px;
+    height: 60px;
+    padding: 5px 0;
+    font-weight: 500;
+    color: white;
+}
+.buy-now{
+    background-color: #377ADD;
+    margin-bottom: 10px;
+}
+.installment1, .installment2{
+    background-color: #F8BA1D;
+    width: 300px;
+    margin: 0 15px;
+}
+#ProductInfo{
+    white-space: pre-wrap;
+}
+.pc_top{
+    height: 40px;
+    width: 100%;
+    margin-top: 10px;
+    padding-left: 20px;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    background-color: #3300FF;
+}
+.product{
+	margin: 10px 15px 20px 15px;
+	text-align: center;
+	border: 0.5px solid rgba(70, 70, 70, 0.844);
+}
+.product img{
+	margin: 10px 0;
+    height: 10rem;
+}
+.product .btn{
+	margin: 5px;
+}
+footer {
+	padding: 15px;
+	color:white;
+    padding-left: 20px;
+}
+footer h4{
+    font-weight: bold;
+    font-size: 18px;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+    padding-left: 10px;
+}
+@media only screen and (max-width: 1200px) {
+    .cus_cus_header form input{
+        width: 300px;
+    }
+	.login h3{
+        padding: 0 0 0 25px;
+	}
+    .login h3 a{
+        font-size: 20px;
+        line-height: 20px;
+    }
+} 
+
+@media only screen and (max-width: 992px) {
+    body{ 
+        height: 1400px;
+    }
+	.login h3{
+        padding: 0 0 0 25px;
+	}
+    .login h3 a{
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .cus_navbar .products{
+        margin-left: 20px;
+    }
+    .cus_navbar .intro, .cus_navbar .contact, .cus_navbar .payment, .cus_navbar .news{
+        margin-left: 5px;
+    }
+}
+
+@media only screen and ((max-width: 480px) or (max-width: 320px)){
+    .Logo .sidebar{
+        float: left;
+        margin: 10px auto;
+        cursor: pointer;
+    }
+    .sidenav a {font-size: 16px;}
+    .search form{
+        margin: 10px auto;
+    }
+    footer{
+        font-size: 12px;
+    }
+}
+    
