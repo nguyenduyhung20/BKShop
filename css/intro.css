@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
+
+.cus_header{
+    height: 60px;	
+	background-color: rgb(25 ,109,236);
+    font-size: 20px;
+    line-height: 60px;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #E9F2F2;
+    overflow-x: hidden;
+    transition: 0.5s;
+    text-align: left;
+}
+  
+.sidenav a {
+    padding: 0 20px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+.cus_header a{
+    text-decoration: none;
+    color: #000000;
+}
+.cus_header form{
+    padding: auto 0;
+    margin: 10px 0;
+    width: 75%;
+}
+.cus_header form input{
+	background: white;
+	border-radius: 45px;
+    border: 1px solid rgb(25 ,109,236);
+}
+.cus_header form button{
+	background: #0066FF;
+	border-radius: 45px;
+}
+.dropdown .dropdown-menu{
+    position: absolute;
+    top: 15px;
+}
+.dropdown .dropdown-menu .dropdown-item{
+    line-height: 30px;
+}
+.cus_navbar{
+    height: 30px;
+    line-height: 30px;
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+.cus_navbar a{
+    color: #000000;
+    font-weight: 600;
+}
+.cus_navbar a:hover {
+    text-decoration: none;
+    color: blue ;
+}
+.cus_navbar .products{
+    border: 0.5px solid rgba(70, 70, 70, 0.844);
+    border-radius: 5px;
+    margin-left: 55px;
+}
+.cus_navbar .intro{
+    background-color: #00DD00;
+}
+.cus_navbar .intro, .cus_navbar .contact, .cus_navbar .payment, .cus_navbar .news{
+    border: 0.5px solid rgba(70, 70, 70, 0.844);
+    border-radius: 5px;
+    margin-left: 15px;
+}
+h3{
+    text-align: center;
+}
+.abs1{
+    background-image: url("../img/about_us.png");
+    height: 190px;
+    margin: 20px 10px;
+    color: white;
+    line-height: 190px;
+    font-size: 35px;
+    text-align: center;
+    font-weight: 500;
+}
+.abs2{
+    /* margin: 10px 5px 0 5px; */
+    border: 2px solid #bdd7fa;
+    background-color: #e7f1ff;
+    text-align: justify;
+    line-height: 28px;
+}
+.abs3{
+    line-height: 28px;
+}
+.abs3 .col-md-3{
+    width: 250px;
+}
+.archieve{
+    height: 60px;
+    width: 100%;
+    margin-top: 10px;
+    line-height: 60px;
+    font-weight: 500;
+    text-align: center;
+    background-color: #abdfe3;
+    border: 1px solid #3887c7;
+}
+.abs4{
+    border-bottom-width: 0.5px; /* Độ rộng đường viền phía dưới là 1px */
+    border-bottom-color: rgba(12, 55, 119, 0.692); /* Màu sắc đường viền là màu xanh dương */
+    border-bottom-style: solid;
+}
+.abs4 .abs4-img{
+    text-align: center;
+}
+.abs4 .abs4-role{
+    color: #818181;
+    font-weight: 500;
+    font-size: 18px;
+}
+.abs4 img{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2f3131;
+}
+.abs5-img img{
+    text-align: right;
+    width: 40px;
+    height: 40px;
+}
+.abs6{
+    font-size: 18px;
+    margin: 0 0 30px 50px;
+}
+footer {
+	padding: 15px;
+	color:white;
+    padding-left: 20px;
+}
+footer h4{
+    font-weight: bold;
+    font-size: 18px;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+    padding-left: 10px;
+}
+
+
+
+@media only screen and ((max-width: 480px) or (max-width: 320px)){
+    .Logo .sidebar{
+        float: left;
+        margin: 10px auto;
+        cursor: pointer;
+    }
+    .sidenav a {font-size: 16px;}
+    .search form{
+        margin: 10px auto;
+    }
+    footer{
+        font-size: 12px;
+    }
+}
+    

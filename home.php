@@ -82,13 +82,13 @@
         <!-- Task bar -->
         <div class="row cus_navbar">
             <div class="col-md-2 col-sm-3 d-none d-sm-block products">
-                <a href="list.php">
+                <a href="home.php">
                     <i class="fa fa-bars"></i>
                     Danh mục sản phẩm
                 </a>            
             </div>
             <div class="col-md-2 col-sm-2 d-none d-sm-block intro">
-                <a href="">
+                <a href="introduction.php">
                     Giới thiệu
                 </a>
             </div>
