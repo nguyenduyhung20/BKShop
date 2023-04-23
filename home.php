@@ -81,7 +81,7 @@
         <!-- Task bar -->
         <div class="row cus_navbar">
             <div class="col-md-2 col-sm-3 d-none d-sm-block products">
-                <a href="home.php">
+                <a href="">
                     <i class="fa fa-bars"></i>
                     Danh mục sản phẩm
                 </a>            
@@ -111,7 +111,7 @@
             <div class="col-md-2 list_product">
                 <ul>
                     <li><a href="#"><i class="bi bi-laptop"></i><span>Laptop</span></a><br></li>
-                    <li><a href="#"><i class="bi bi-pc-display"></i><span>PC</span></a><br></li>
+                    <li><a href="list.php"><i class="bi bi-pc-display"></i><span>PC</span></a><br></li>
                     <li><a href="#"><i class="bi bi-mouse"></i><span>Chuột máy tính</span></a><br></li>
                     <li><a href="#"><i class="bi bi-keyboard"></i><span>Bàn phím</span></a><br></li>
                     <li><a href="#"><i class="bi bi-headphones"></i><span>Tai nghe</span></a><br></li>
@@ -134,7 +134,7 @@
         </div>
         <div class="pc_top">
             PC BÁN CHẠY NHẤT
-            <a style="float:right; text-decoration: none; color: white;" href="#">Xem tất cả ></a>
+            <a style="float:right; text-decoration: none; color: white;" href="list.php">Xem tất cả ></a>
         </div>
         <div class="d-flex flex-wrap justify-content-between mx-2">
             <div class="product col-md-2">

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Giỏ hàng</title>
+  <title>Thanh toán</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link type="text/css" rel="stylesheet" href="css/detail.css">
+  <link type="text/css" rel="stylesheet" href="css/payment.css">
   <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -27,15 +27,15 @@
                         </a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="login.php">Đăng nhập</a>
-                            <a class="dropdown-item" href="sigin.php">Đăng ký</a>
+                            <a class="dropdown-item" href="signin.php">Đăng ký</a>
                         </div>
                     </div>
-                    <a href="#">Giỏ hàng</a>
+                    <a href="cart.php">Giỏ hàng</a>
                     <hr>
-                    <a href="#">Danh mục sản phẩm</a>
-                    <a href="#">Giới thiệu</a>
+                    <a href="">Danh mục sản phẩm</a>
+                    <a href="introduction.php">Giới thiệu</a>
                     <a href="#">Tin tức</a>
-                    <a href="#">Thanh toán</a>
+                    <a href="payment.php">Thanh toán</a>
                     <a href="#">Liên hệ</a>
                 </div>
                 <button class="btn sidebar d-md-none"  onclick="openNav()" type="submit">
@@ -73,7 +73,7 @@
             </div>
             <!-- Shopping cart -->
             <div class="col-md-2 d-none d-sm-block" style="font-size:18px;">
-                <a href="#" id="shopcart_text">
+                <a href="cart.php" id="shopcart_text">
                     <i class="bi bi-cart3" style="font-size:20px;"></i>
                     Giỏ hàng
                 </a>           
@@ -107,7 +107,7 @@
                 </a>
             </div>
             <div class="col-md-2 payment">
-                <a href="payment.php">
+                <a href="">
                     Thanh toán
                 </a>           
             </div>
@@ -120,72 +120,131 @@
         <nav style="margin-left: 30px;" aria-label="breadcrumb">
             <ol class="breadcrumb bg-transparent border-bottom">
                 <li class="breadcrumb-item"><a href="home.php">Trang chủ</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Giỏ hàng</li>
+                <li class="breadcrumb-item active" aria-current="page">Thanh toán</li>
             </ol>
         </nav>
-        <h4 class="text-center my-3">Giỏ hàng của bạn</h4>
-        <table class="table table-striped mx-auto my-3" style="width:85%;">
-            <thread>
-                <tr class="table-success">
-                    <th scope="col">Tên sản phẩm</th>
-                    <th scope="col">Giá bán</th>
-                    <th scope="col">Số lượng</th>
-                    <th scope="col">Thành tiền</th>
-                    <th scope="col"></th>
-                </tr>
-            </thread>
-            <tbody>
-                <tr>
-                    <td>
-                        <img src="img/hp1.jpg" alt="main_pic" width="10%" height="10%">
-                        HP AIO 22 dd2002d i5 1235U 21.5 inch (6K7G1PA)
-                    </td>
-                    <td>20.390.000Đ</td>
-                    <td class="col-1">
-                        <form action="" method="GET">
-                            <input tpye="text" class="form-control">
+        <div class="d-flex justify-content-between mx-2 my-4 pb-3">
+            <div class="col-md-4">
+                <h4 class="py-3">Thông tin nhận hàng</h4>
+                <form action="" method="GET">
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Nhập email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="Name" placeholder="Họ và tên">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="PhoneNum" placeholder="Số điện thoại">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="Address" placeholder="Địa chỉ">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="Note" placeholder="Ghi chú">
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-header font-weight-bold">
+                        <i class="fa fa-truck"></i> Phương thức vận chuyển
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-check py-2 border-bottom">
+                                <input class="form-check-input" type="radio" name="SM" id="SM1" value="option1" chcked>
+                                <label class="form-check-label" for="SM1">
+                                    Nhận tại cửa hàng
+                                </label>
+                            </div>
+                            <div class="form-check pt-2">
+                                <input class="form-check-input" type="radio" name="SM" id="SM2" value="option2">
+                                <label class="form-check-label" for="SM2">
+                                    Giao hàng nhanh (Trong vòng 2 giờ)
+                                </label>
+                            </div>
                         </form>
-                    </td>
-                    <td>20.390.000Đ</td>
-                    <td>
-                        <button type="button" class="btn btn-outline-danger">
-                            <i class="bi bi-trash text-danger"></i>
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="img/imac1.jpg" alt="Product" width="10%" height="10%">
-                        iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU (MGPK3SA/A)
-                    </td>
-                    <td>27.990.000Đ</td>
-                    <td class="col-1">
-                        <form action="" method="GET">
-                            <input tpye="text" class="form-control">
-                        </form>
-                    </td>
-                    <td>27.990.000Đ</td>
-                    <td>
-                        <button type="button" class="btn btn-outline-danger">
-                            <i class="bi bi-trash text-danger"></i>
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="text-right table-info" colspan="5">
-                        Tổng tiền:
-                        <span style="color: rgb(17, 17, 136); font-weight:600;">48.380.000Đ</span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="d-flex justify-content-between mb-3">
-            <button class="btn" style="background-color:#FFD700; font-weight:500;" onclick="location.href='home.php'" type="button">
-                TIẾP TỤC MUA HÀNG
-            </button>
-            <button class="btn" style="background-color:#00B2EE; font-weight:500;" onclick="location.href='payment.php'" type="button"> 
-                THANH TOÁN
-            </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header font-weight-bold">
+                        <i class="fa fa-money"></i> Hình thức thanh toán
+                    </div>
+                    <div class="card-body">
+                        <div class="form-check py-2 border-bottom">
+                            <input class="form-check-input" type="radio" name="PM" id="PM1" value="option1" checked>
+                            <label class="form-check-label" for="PM1">
+                                Thanh toán bằng tiền mặt
+                            </label>
+                        </div>
+                        <div class="form-check py-2 border-bottom">
+                            <input class="form-check-input" type="radio" name="PM" id="PM2" value="option1">
+                            <label class="form-check-label" for="PM2">
+                                Internet Banking
+                            </label>
+                        </div>
+                        <div class="form-check py-2 border-bottom d-flex justify-content-left">
+                            <input class="form-check-input" type="radio" name="PM" id="PM3" value="option1">
+                            <label class="form-check-label" for="PM3">
+                                <img src="img/logo-vnpay.svg" height="20"> Thanh toán qua VNPAY
+                            </label>
+                        </div>
+                        <div class="form-check pt-2 d-flex justify-content-left">
+                            <input class="form-check-input" type="radio" name="PM" id="PM4" value="option2">
+                            <label class="form-check-label" for="PM4">
+                                <img src="img/momo.png" height="20"> Thanh toán bằng ví MOMO
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 border rounded">
+                <h4 class="py-3">Chi tiết đơn hàng</h4>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>
+                                HP AIO 22 dd2002d i5 1235U 21.5 inch (6K7G1PA)<br>
+                                <span style="color:#999999;">
+                                    Giá bán: 20.390.000Đ<br>
+                                    Số lượng: 1
+                                </span>
+                            </td>
+                            <td>20.390.000Đ</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU (MGPK3SA/A)<br>
+                                <span style="color:#999999;">
+                                    Giá bán: 27.990.000Đ<br>
+                                    Số lượng: 1
+                                </span>
+                            </td>
+                            <td>27.990.000Đ</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Tạm tính:<br>
+                                Phí vận chuyển:<br>
+                                Tổng tiền:
+                            </td>
+                            <td>
+                                <span style="color: rgb(17, 17, 136);">48.380.000Đ</span><br>
+                                Miễn phí<br>
+                                <span style="color: rgb(17, 17, 136); font-size:20px; font-weight:bold;">48.380.000Đ</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="d-flex justify-content-between mb-3">
+                    <button class="btn btn-link" id="return_cart" onclick="location.href='cart.php'" type="button">
+                        Quay lại giỏ hàng
+                    </button>
+                    <button class="btn" id="btn-order" type="button"> 
+                        Đặt hàng
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
     <footer class="bg-primary">
