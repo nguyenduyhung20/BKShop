@@ -1,43 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
 
-
+/* Header */
 .cus_header{
     height: 60px;	
 	background-color: rgb(25 ,109,236);
     font-size: 20px;
     line-height: 60px;
-}
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #E9F2F2;
-    overflow-x: hidden;
-    transition: 0.5s;
-    text-align: left;
-}
-  
-.sidenav a {
-    padding: 0 20px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+    font-weight: 600;
 }
 
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
+    /* Side navigation for phone */
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #E9F2F2;
+        overflow-x: hidden;
+        transition: 0.5s;
+        text-align: left;
+    }
+    
+    .sidenav a {
+        padding: 0 20px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
   
-.cus_header a{
+.cus_header div a{
     text-decoration: none;
     color: #000000;
 }
@@ -62,6 +65,8 @@
 .dropdown .dropdown-menu .dropdown-item{
     line-height: 30px;
 }
+
+/* Navbar */
 .cus_navbar{
     height: 30px;
     line-height: 30px;
@@ -75,7 +80,7 @@
 }
 .cus_navbar a:hover {
     text-decoration: none;
-    color: blue ;
+    color: #000000;
 }
 .cus_navbar .products{
     background-color: #00DD00;
@@ -83,25 +88,48 @@
     border-radius: 5px;
     margin-left: 55px;
 }
-.cus_navbar .intro, .cus_navbar .contact, .cus_navbar .payment, .cus_navbar .news{
+.cus_navbar .intro, 
+.cus_navbar .contact, 
+.cus_navbar .payment, 
+.cus_navbar .news{
     border: 0.5px solid rgba(70, 70, 70, 0.844);
     border-radius: 5px;
     margin-left: 15px;
 }
+.cus_navbar .intro:hover, 
+.cus_navbar .contact:hover, 
+.cus_navbar .payment:hover, 
+.cus_navbar .news:hover{
+    background-color: rgb(110, 189, 235);
+}
+
+/* List kinds of product */
 .main-content .list_product{
     background-color: rgb(233, 242, 242);
     margin: 10px 0 0 55px;
     border-radius: 5px;
 }
-.main-content .list_product table tr td{
-    padding: 10px 0;
+.main-content .list_product ul{
+    list-style: none;
+    padding-left: 15px;
+    margin-top: 5px;
 }
-.main-content .list_product table tr td a{
+.main-content .list_product ul li{
+    padding: 10px 0 10px 10px;
+    list-style: none;
+}
+.main-content .list_product ul li:hover{
+    background-color: rgb(141, 245, 245);
+    border-radius: 5px;
+}
+.main-content .list_product ul li a{
     text-decoration: none;
     color: #000000;
-    padding: 0 5px;
-    margin-top: 50px;
 }
+.main-content .list_product ul li a span{
+    padding-left: 10px;
+}
+
 .pc_top{
     height: 40px;
     width: 100%;
@@ -113,6 +141,7 @@
     color: white;
     background-color: #3300FF;
 }
+/* Info of product */
 .product{
 	margin: 10px 15px 20px 15px;
 	text-align: center;
@@ -125,6 +154,8 @@
 .product .btn{
 	margin: 5px;
 }
+
+/* Footer */
 footer {
 	padding: 15px;
 	color:white;
@@ -143,25 +174,11 @@ footer a{
     .cus_cus_header form input{
         width: 300px;
     }
-	.login h3{
-        padding: 0 0 0 25px;
-	}
-    .login h3 a{
-        font-size: 20px;
-        line-height: 20px;
-    }
 } 
 
 @media only screen and (max-width: 992px) {
     body{ 
         height: 1400px;
-    }
-	.login h3{
-        padding: 0 0 0 25px;
-	}
-    .login h3 a{
-        font-size: 20px;
-        line-height: 20px;
     }
     .cus_navbar .products{
         margin-left: 20px;
@@ -172,7 +189,7 @@ footer a{
 }
 
 @media only screen and ((max-width: 480px) or (max-width: 320px)){
-    .Logo .sidebar{
+    .sidebar{
         float: left;
         margin: 10px auto;
         cursor: pointer;

@@ -10,14 +10,13 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 </head>
 <body>
     <div class="container-fluid">
         <!-- Header -->
         <div class="row cus_header">
-            <div class="col-md-2 Logo text-md-left text-center text">
+            <div class="col-md-2 text-md-left text-center text">
                 <!-- Side navbar for phone -->
                 <div id="mySidenav" class="sidenav pt-5">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -30,7 +29,7 @@
                             <a class="dropdown-item" href="sigin.php">Đăng ký</a>
                         </div>
                     </div>
-                    <a href="#">Giỏ hàng</a>
+                    <a href="cart.php">Giỏ hàng</a>
                     <hr>
                     <a href="#">Danh mục sản phẩm</a>
                     <a href="#">Giới thiệu</a>
@@ -59,7 +58,7 @@
                 </form>
             </div>
             <!-- Account -->
-            <div class="col-md-2 d-none d-sm-block account" style="font-size:18px;">
+            <div class="col-md-2 d-none d-sm-block" style="font-size:18px;">
                 <div class="dropdown">
                     <i class="bi bi-person-circle" style="font-size:20px;"></i>
                     <a class="dropdown-toggle" role="button" data-toggle="dropdown" id="user_text" aria-expanded="false">
@@ -72,8 +71,8 @@
                 </div>   
             </div>
             <!-- Shopping cart -->
-            <div class="col-md-2 d-none d-sm-block shopcart" style="font-size:18px;">
-                <a href="#" id="shopcart_text">
+            <div class="col-md-2 d-none d-sm-block" style="font-size:18px;">
+                <a href="cart.php" id="shopcart_text">
                     <i class="bi bi-cart3" style="font-size:20px;"></i>
                     Giỏ hàng
                 </a>           
@@ -110,38 +109,16 @@
         </div>
         <div class="row main-content">
             <div class="col-md-2 list_product">
-                <table>
-                    <tr>
-                        <td><a href="#"><i class="bi bi-laptop"></i></a></td>
-                        <td><a href="#">Laptop</a></td>
-                    </tr>  
-                    <tr>
-                        <td><a href="#"><i class="bi bi-pc-display"></i></a></td>
-                        <td><a href="#">PC</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#"><i class="bi bi-mouse"></i></a></td>
-                        <td><a href="#">Chuột máy tính</a></td>
-                    </tr>  
-                    <tr>
-                        <td><a href="#"><i class="bi bi-keyboard"></i></a></td>
-                        <td><a href="#">Bàn phím</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#"><i class="bi bi-headphones"></i></a></td>
-                        <td><a href="#">Tai nghe + Loa</a></td>
-                    </tr>  
-                    <tr>
-                        <td><a href="#"><i class="bi bi-cpu"></i></a></td>
-                        <td><a href="#">Linh kiện PC</a></td>
-                    </tr> 
-                    <tr>
-                        <td><a href="#"><i class="bi bi-tv"></i></a></td>
-                        <td><a href="#">Màn hình</a></td>
-                    </tr> 
-                </table>
+                <ul>
+                    <li><a href="#"><i class="bi bi-laptop"></i><span>Laptop</span></a><br></li>
+                    <li><a href="#"><i class="bi bi-pc-display"></i><span>PC</span></a><br></li>
+                    <li><a href="#"><i class="bi bi-mouse"></i><span>Chuột máy tính</span></a><br></li>
+                    <li><a href="#"><i class="bi bi-keyboard"></i><span>Bàn phím</span></a><br></li>
+                    <li><a href="#"><i class="bi bi-headphones"></i><span>Tai nghe</span></a><br></li>
+                    <li><a href="#"><i class="bi bi-cpu"></i><span>Linh kiện</span></a><br></li>
+                    <li><a href="#"><i class="bi bi-tv"></i><span>Màn hình</span></a><br></li>
+                </ul>
             </div>
-            <!-- <div class="col-md-1"></div> -->
             <div class="col-md-6" style="margin-top: 10px">
                 <img src="img/slideshow_1.png" alt="pst1" width="100%" height="300px">
                 <div class="row" style="margin-top:10px">
@@ -159,30 +136,18 @@
             PC BÁN CHẠY NHẤT
             <a style="float:right; text-decoration: none; color: white;" href="#">Xem tất cả ></a>
         </div>
-        <div class="row ml-4">
+        <div class="d-flex flex-wrap justify-content-between mx-2">
             <div class="product col-md-2">
-                <img src="img/imac1.jpg" alt="Product">
-                <p>iMac 24 inch M1 2021 4.5K/7-core GPU</p>
-                <p> Giá: 23.990.000Đ</p>
+                <img src="img/hp1.jpg" alt="Product">
+                <p>HP AIO 22 dd2002d i5 1235U 21.5 inch (6K7G1PA)</p>
+                <p> Giá: 20.390.000Đ</p>
                 <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
             </div>
             <div class="product col-md-2">
                 <img src="img/imac1.jpg" alt="Product">
-                <p>iMac 24 inch M1 2021 4.5K/7-core GPU</p>
-                <p> Giá: 23.990.000Đ</p>
-                <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
-            </div>
-            <div class="product col-md-2">
-                <img src="img/imac1.jpg" alt="Product">
-                <p>iMac 24 inch M1 2021 4.5K/7-core GPU</p>
-                <p> Giá: 23.990.000Đ</p>
-                <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
-            </div>
-            <div class="product col-md-2">
-                <img src="img/imac1.jpg" alt="Product">
-                <p>iMac 24 inch M1 2021 4.5K/7-core GPU</p>
-                <p> Giá: 23.990.000Đ</p>
-                <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
+                <p>iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU (MGPK3SA/A) </p>
+                <p> Giá: 27.990.000Đ</p>
+                <a href="" class="btn btn-outline-primary">Đặt mua</a>
             </div>
             <div class="product col-md-2">
                 <img src="img/hp1.jpg" alt="Product">
@@ -191,10 +156,10 @@
                 <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
             </div>
             <div class="product col-md-2">
-                <img src="img/hp1.jpg" alt="Product">
-                <p>HP AIO 22 dd2002d i5 1235U 21.5 inch (6K7G1PA)</p>
-                <p> Giá: 20.390.000Đ</p>
-                <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
+                <img src="img/imac1.jpg" alt="Product">
+                <p>iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU (MGPK3SA/A) </p>
+                <p> Giá: 27.990.000Đ</p>
+                <a href="" class="btn btn-outline-primary">Đặt mua</a>
             </div>
             <div class="product col-md-2">
                 <img src="img/hp1.jpg" alt="Product">
@@ -203,18 +168,40 @@
                 <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
             </div>
             <div class="product col-md-2">
+                <img src="img/imac1.jpg" alt="Product">
+                <p>iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU (MGPK3SA/A) </p>
+                <p> Giá: 27.990.000Đ</p>
+                <a href="" class="btn btn-outline-primary">Đặt mua</a>
+            </div>
+            <div class="product col-md-2">
                 <img src="img/hp1.jpg" alt="Product">
                 <p>HP AIO 22 dd2002d i5 1235U 21.5 inch (6K7G1PA)</p>
                 <p> Giá: 20.390.000Đ</p>
                 <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
+            </div>
+            <div class="product col-md-2">
+                <img src="img/imac1.jpg" alt="Product">
+                <p>iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU (MGPK3SA/A) </p>
+                <p> Giá: 27.990.000Đ</p>
+                <a href="" class="btn btn-outline-primary">Đặt mua</a>
+            </div>
+            <div class="product col-md-2">
+                <img src="img/hp1.jpg" alt="Product">
+                <p>HP AIO 22 dd2002d i5 1235U 21.5 inch (6K7G1PA)</p>
+                <p> Giá: 20.390.000Đ</p>
+                <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
+            </div>
+            <div class="product col-md-2">
+                <img src="img/imac1.jpg" alt="Product">
+                <p>iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU (MGPK3SA/A) </p>
+                <p> Giá: 27.990.000Đ</p>
+                <a href="" class="btn btn-outline-primary">Đặt mua</a>
             </div>
         </div>
     </div>
     <footer class="bg-primary">
         <div class="row g-3">
             <div class="col-md-4">
-                <!-- <img src="smartphone.png" alt=""> -->
-                <!-- Liên hệ với chúng tôi qua số điện thoại: 0999 999 999 -->
                 <h4>LIÊN HỆ</h4>
                 <p>Hệ thống tổng đài: 0999 999 999<br>(Hoạt động từ 8h đến 20h cùng ngày)</p>
                 <p>Email: bkshop.vn@gmail.com</p>

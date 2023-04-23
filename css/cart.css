@@ -5,8 +5,8 @@
 	background-color: rgb(25 ,109,236);
     font-size: 20px;
     line-height: 60px;
-    font-weight: 600;
 }
+
     /* Side navigation for phone */
     .sidenav {
         height: 100%;
@@ -63,6 +63,8 @@
 .dropdown .dropdown-menu .dropdown-item{
     line-height: 30px;
 }
+
+/* Navbar */
 .cus_navbar{
     height: 60px;
     line-height: 30px;
@@ -87,19 +89,19 @@
     margin-left: 55px;
     font-weight: 600;
 }
-
+/* Hover dropdown list kinds of product */
 .dropdown {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .dropdown-content {
-display: none;
-position: absolute;
-background-color: rgb(233, 242, 242);
-width: 200px;
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: rgb(233, 242, 242);
+  width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 .dropdown-content ul{
     list-style: none;
@@ -111,7 +113,6 @@ z-index: 1;
     padding: 5px 0 5px 10px;
     list-style: none;
     height: 40px;
-    /* line-height: 40px; */
 }
 .dropdown-content ul li:hover{
     background-color: rgb(141, 245, 245);
@@ -132,85 +133,88 @@ z-index: 1;
 }
 
 .dropdown:hover .dropdown-content {display: block;}
-  
-.cus_navbar .intro{
-    background-color: #00DD00;
-}
-.cus_navbar .intro, .cus_navbar .contact, .cus_navbar .payment, .cus_navbar .news{
+
+.cus_navbar .intro, 
+.cus_navbar .contact, 
+.cus_navbar .payment, 
+.cus_navbar .news{
     border: 0.5px solid rgba(70, 70, 70, 0.844);
     border-radius: 5px;
     margin-left: 15px;
 }
 .cus_navbar .products:hover, 
-.cus_navbar .contact:hover, .cus_navbar .payment:hover, .cus_navbar .news:hover{
+.cus_navbar .intro:hover, 
+.cus_navbar .contact:hover, 
+.cus_navbar .payment:hover, 
+.cus_navbar .news:hover{
     background-color: rgb(110, 189, 235);
 }
-h3{
-    text-align: center;
+
+/* Information of product */
+.product-name{
+    font-size: 27px;
+    font-weight: bold;
 }
-.abs1{
-    background-image: url("../img/about_us.png");
-    height: 190px;
-    margin: 20px 10px;
-    color: white;
-    line-height: 190px;
-    font-size: 35px;
-    text-align: center;
+.product-promote{
+    background-color: rgb(60, 217, 238);
+    border-radius: 8px 8px 0 0;
+    height: 35px;
+    line-height: 35px;
+    font-weight: 600;
+    padding-left: 10px;
+    border-top-width: 1px; 
+    border-top-color: rgba(31, 108, 223, 0.844); 
+    border-top-style: solid;
+}
+.product-promote-list li{
+    padding: 5px 0;
+}
+.product-promote-list{
+    border-bottom-width: 0.5px;
+    border-bottom-color: rgb(70, 70, 70, 0.844); 
+    border-bottom-style: solid;
+    border-radius: 0 0 8px 8px;
+}
+.price{
+    font-size: 25px;
     font-weight: 500;
+    margin: 15px 0;
 }
-.abs2{
-    /* margin: 10px 5px 0 5px; */
-    border: 2px solid #bdd7fa;
-    background-color: #e7f1ff;
+.buy-now, .add-cart{
+    margin: 5px 20px;
+    text-align: center;
+    height: 50px;
+    padding: 5px 0;
+    font-weight: 500px;
+    color: white;
+}
+
+.buy-now{
+    background-color: #377ADD;
+    margin-left: 0;
+}
+.add-cart{
+    background-color: #F8BA1D;
+}
+.PI1{
+    border: 2px solid #85faac;
+    background-color: #e7ffef;
     text-align: justify;
     line-height: 28px;
 }
-.abs3{
-    line-height: 28px;
+.product{
+	margin: 10px 15px 20px 15px;
+	text-align: center;
+	border: 0.5px solid rgba(70, 70, 70, 0.844);
 }
-.abs3 .col-md-3{
-    width: 250px;
+.product img{
+	margin: 10px 0;
+    height: 10rem;
 }
-.archieve{
-    height: 60px;
-    width: 100%;
-    margin-top: 10px;
-    line-height: 60px;
-    font-weight: 500;
-    text-align: center;
-    background-color: #abdfe3;
-    border: 1px solid #3887c7;
+.product .btn{
+	margin: 5px;
 }
-.abs4{
-    border-bottom-width: 0.5px; /* Độ rộng đường viền phía dưới là 1px */
-    border-bottom-color: rgba(12, 55, 119, 0.692); /* Màu sắc đường viền là màu xanh dương */
-    border-bottom-style: solid;
-}
-.abs4 .abs4-img{
-    text-align: center;
-}
-.abs4 .abs4-role{
-    color: #818181;
-    font-weight: 500;
-    font-size: 18px;
-}
-.abs4 img{
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #2f3131;
-}
-.abs5-img img{
-    text-align: right;
-    width: 40px;
-    height: 40px;
-}
-.abs6{
-    font-size: 18px;
-    margin: 0 0 30px 50px;
-}
+/* Footer */
 footer {
 	padding: 15px;
 	color:white;
@@ -225,11 +229,26 @@ footer a{
     color: white;
     padding-left: 10px;
 }
+@media only screen and (max-width: 1200px) {
+    .cus_cus_header form input{
+        width: 300px;
+    }
+} 
 
-
+@media only screen and (max-width: 992px) {
+    body{ 
+        height: 1400px;
+    }
+    .cus_navbar .products{
+        margin-left: 20px;
+    }
+    .cus_navbar .intro, .cus_navbar .contact, .cus_navbar .payment, .cus_navbar .news{
+        margin-left: 5px;
+    }
+}
 
 @media only screen and ((max-width: 480px) or (max-width: 320px)){
-    .Logo .sidebar{
+    .sidebar{
         float: left;
         margin: 10px auto;
         cursor: pointer;

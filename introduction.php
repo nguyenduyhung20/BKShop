@@ -17,7 +17,7 @@
     <div class="container-fluid">
         <!-- Header -->
         <div class="row cus_header">
-            <div class="col-md-2 Logo text-md-left text-center text">
+            <div class="col-md-2 text-md-left text-center text">
                 <!-- Side navbar for phone -->
                 <div id="mySidenav" class="sidenav pt-5">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -42,7 +42,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <!-- Logo of web page -->
-                <a href="" class="px-2">
+                <a href="home.php" class="px-2">
                     <img src="img/Logo.png" alt="logo" width="30" height="30" class="d-inline-block align-text-top">
                     BKShop
                 </a>            
@@ -59,7 +59,7 @@
                 </form>
             </div>
             <!-- Account -->
-            <div class="col-md-2 d-none d-sm-block account" style="font-size:18px;">
+            <div class="col-md-2 d-none d-sm-block" style="font-size:18px;">
                 <div class="dropdown">
                     <i class="bi bi-person-circle" style="font-size:20px;"></i>
                     <a class="dropdown-toggle" role="button" data-toggle="dropdown" id="user_text" aria-expanded="false">
@@ -72,8 +72,8 @@
                 </div>   
             </div>
             <!-- Shopping cart -->
-            <div class="col-md-2 d-none d-sm-block shopcart" style="font-size:18px;">
-                <a href="#" id="shopcart_text">
+            <div class="col-md-2 d-none d-sm-block" style="font-size:18px;">
+                <a href="cart.php" id="shopcart_text">
                     <i class="bi bi-cart3" style="font-size:20px;"></i>
                     Giỏ hàng
                 </a>           
@@ -81,11 +81,19 @@
         </div>
         <!-- Task bar -->
         <div class="row cus_navbar">
-            <div class="col-md-2 col-sm-3 d-none d-sm-block products">
-                <a href="home.php">
-                    <i class="fa fa-bars"></i>
-                    Danh mục sản phẩm
-                </a>            
+            <div class="col-md-2 products dropdown">
+                <div class="dropbtn"><i class="fa fa-bars"></i> Danh mục sản phẩm</div>
+                <div class="dropdown-content">
+                <ul>
+                    <li><a href="#"><i class="bi bi-laptop"></i><span>Laptop</span></a><br></li>
+                    <li><a href="#"><i class="bi bi-pc-display"></i><span>PC</span></a><br></li>
+                    <li><a href="#"><i class="bi bi-mouse"></i><span>Chuột máy tính</span></a><br></li>
+                    <li><a href="#"><i class="bi bi-keyboard"></i><span>Bàn phím</span></a><br></li>
+                    <li><a href="#"><i class="bi bi-headphones"></i><span>Tai nghe</span></a><br></li>
+                    <li><a href="#"><i class="bi bi-cpu"></i><span>Linh kiện</span></a><br></li>
+                    <li><a href="#"><i class="bi bi-tv"></i><span>Màn hình</span></a><br></li>
+                </ul>
+                </div>
             </div>
             <div class="col-md-2 col-sm-2 d-none d-sm-block intro">
                 <a href="">
@@ -108,12 +116,17 @@
                 </a>           
             </div>
         </div>
+        <nav style="margin-left: 30px;" aria-label="breadcrumb">
+            <ol class="breadcrumb bg-transparent border-bottom">
+                <li class="breadcrumb-item"><a href="home.php">Trang chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Giới thiệu</li>
+            </ol>
+        </nav>
         <div class="abs1 col-md-12">
             VỀ CHÚNG TÔI
         </div>
         <h3>BKShop - Online Computer Gear Store</h3>
         <div class="row">
-            <!-- <div class="col-md-1"></div> -->
             <img src="img/founder.png" class="col-md-4 ml-3" alt="founder" width="90%" height="250px">
             <div class="col-md-7" style="line-height:28px;">
                 &emsp;Chào mừng đến với BKShop - nơi mà bạn có thể tìm thấy những sản phẩm máy tính chất lượng và 
@@ -272,12 +285,11 @@
                     <img src="img/client4.jpg" alt="member1">
                 </div>
             </div>
+        </div>
     </div>
     <footer class="bg-primary">
         <div class="row g-3">
             <div class="col-md-4">
-                <!-- <img src="smartphone.png" alt=""> -->
-                <!-- Liên hệ với chúng tôi qua số điện thoại: 0999 999 999 -->
                 <h4>LIÊN HỆ</h4>
                 <p>Hệ thống tổng đài: 0999 999 999<br>(Hoạt động từ 8h đến 20h cùng ngày)</p>
                 <p>Email: bkshop.vn@gmail.com</p>
