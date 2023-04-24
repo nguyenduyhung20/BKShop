@@ -27,5 +27,6 @@ RewriteRule ^update_profile/?$ index.php?action=update_profile [L]
 RewriteRule ^profile/change_info/?$ index.php?action=change_info [L]
 RewriteRule ^profile/change_password/?$ index.php?action=change_password [L]
 RewriteRule ^profile/site_settings/?$ index.php?action=site_settings [L]
+RewriteRule ^profile/change_password_handler/?$ index.php?action=change_password_handler [L]
 
 RewriteRule ^/?$ index.php [L]

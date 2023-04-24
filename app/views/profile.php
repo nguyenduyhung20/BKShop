@@ -32,7 +32,7 @@
         <div class="content">
             <div class="container-fluid">
                 <?php include 'header.php'; ?>
-                <div class="row ">
+                <div class="row my-1">
                     <div class="col-md-3 py-3">
                         <div class="list-group">
                             <a href="/profile" class="list-group-item list-group-item-action">Current User</a>
@@ -44,7 +44,7 @@
                                 Settings</a>
                         </div>
                     </div>
-                    <div class="col-md-9 py-3">
+                    <div class="col-md-9 py-4">
                         <?php
                         $action = $_GET['action'];
                         switch ($action) {

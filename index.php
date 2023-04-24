@@ -72,6 +72,9 @@ if (isset($_GET['action'])) {
     } elseif ($_GET['action'] == 'site_settings') {
         $userController->profile();
         exit;
+    } elseif ($_SERVER['REQUEST_METHOD'] == 'POST' && $_GET['action'] == 'change_password_handler') {
+        $userController->change_password_handler();
+        exit;
     }
 } else {
     // Redirect to the homepage

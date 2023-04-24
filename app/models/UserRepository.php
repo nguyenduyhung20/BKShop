@@ -2,14 +2,17 @@
 
 require_once "User.php";
 
-class UserRepository {
+class UserRepository
+{
     private $conn;
 
-    public function __construct($conn) {
+    public function __construct($conn)
+    {
         $this->conn = $conn;
     }
 
-    public function findAll() {
+    public function findAll()
+    {
         $sql = "SELECT * FROM users";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute();
@@ -22,7 +25,8 @@ class UserRepository {
         return $users;
     }
 
-    public function findById($id) {
+    public function findById($id)
+    {
         $sql = "SELECT * FROM users WHERE id = :id";
         $stmt = $this->conn->prepare($sql);
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
@@ -31,7 +35,8 @@ class UserRepository {
         return $this->createUserFromData($userData);
     }
 
-    public function findByUsername($username) {
+    public function findByUsername($username)
+    {
         $sql = "SELECT * FROM users WHERE username = :username";
         $stmt = $this->conn->prepare($sql);
         $stmt->bindParam(':username', $username, PDO::PARAM_STR);
@@ -44,7 +49,8 @@ class UserRepository {
         return null;
     }
 
-    public function findByEmail($email) {
+    public function findByEmail($email)
+    {
         $sql = "SELECT * FROM users WHERE email = :email";
         $stmt = $this->conn->prepare($sql);
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
@@ -57,7 +63,8 @@ class UserRepository {
         return null;
     }
 
-    private function createUserFromData($data) {
+    private function createUserFromData($data)
+    {
         return new User(
             $data['id'],
             $data['username'],
@@ -73,7 +80,8 @@ class UserRepository {
         );
     }
 
-    public function updateAdmin(User $user) {
+    public function updateAdmin(User $user)
+    {
         $sql = "UPDATE users SET 
             username = :username, 
             first_name = :first_name, 
@@ -84,7 +92,7 @@ class UserRepository {
             role = :role 
             WHERE id = :id";
         $stmt = $this->conn->prepare($sql);
-        
+
         $id = $user->getId();
         $username = $user->getUsername();
         $first_name = $user->getFirstName();
@@ -105,21 +113,24 @@ class UserRepository {
         $stmt->execute();
     }
 
-    public function updateUser (User $user) {
+    public function updateUser(User $user)
+    {
         $sql = "UPDATE users SET 
         first_name = :first_name, 
         last_name = :last_name, 
         email = :email, 
+        password = :password,
         phone = :phone, 
         address = :address
         WHERE id = :id";
 
-        $stmt = $this->conn->prepare($sql);        
+        $stmt = $this->conn->prepare($sql);
 
         $id = $user->getId();
         $firstName = $user->getFirstName();
         $lastName = $user->getLastName();
         $email = $user->getEmail();
+        $password = $user->getPassword();
         $phone = $user->getPhone();
         $address = $user->getAddress();
 
@@ -128,12 +139,14 @@ class UserRepository {
         $stmt->bindParam(':first_name', $firstName, PDO::PARAM_STR);
         $stmt->bindParam(':last_name', $lastName, PDO::PARAM_STR);
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->bindParam(':password', $password, PDO::PARAM_STR);
         $stmt->bindParam(':phone', $phone, PDO::PARAM_STR);
         $stmt->bindParam(':address', $address, PDO::PARAM_STR);
         $stmt->execute();
     }
 
-    public function deleteUser(User $user) {
+    public function deleteUser(User $user)
+    {
         $sql = "DELETE FROM users WHERE id = :id";
         $stmt = $this->conn->prepare($sql);
         $stmt->bindParam(':id', $user->getId(), PDO::PARAM_INT);
@@ -141,8 +154,9 @@ class UserRepository {
     }
 
 
-    
-    public function createUser($username, $firstName, $lastName, $email, $password, $phone, $address, $role){
+
+    public function createUser($username, $firstName, $lastName, $email, $password, $phone, $address, $role)
+    {
         $sql = "INSERT INTO users (username, first_name, last_name, email, password, phone, address, role) VALUES (:username, :first_name, :last_name, :email, :password, :phone, :address, :role)";
         $stmt = $this->conn->prepare($sql);
 

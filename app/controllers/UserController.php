@@ -109,6 +109,60 @@ class UserController
         $this->userRepository->updateUser($loggedInUser);
         header('Location: /profile');
     }
-    
+    public function change_password_handler()
+    {
+        $sessionManager = $this->sessionManager;
+        $userRepository = $this->userRepository;
+        $authService = $this->authService;
+
+        // Check if user is logged in
+        if (!$authService->isLoggedIn()) {
+            $sessionManager->set('login_error', 'Please log in to change your password.');
+            header('Location: /login');
+            exit;
+        }
+
+        // Get current user's ID
+        $userId = $authService->getLoggedInUser()->getId();
+
+        // Get form data
+        $currentPassword = $_POST['current_password'] ?? '';
+        $newPassword = $_POST['new_password'] ?? '';
+        $confirmPassword = $_POST['confirm_password'] ?? '';
+
+        // Validate form data
+        if (empty($currentPassword) || empty($newPassword) || empty($confirmPassword)) {
+            $sessionManager->set('change_password_error', 'Please fill in all required fields.');
+            header('Location: /profile/change_password');
+            exit;
+        }
+
+        if ($newPassword !== $confirmPassword) {
+            $sessionManager->set('change_password_error', 'The new password and confirmation password do not match.');
+            header('Location: /profile/change_password');
+            exit;
+        }
+
+        // Get current user's password hash
+        $user = $userRepository->findById($userId);
+        $currentPasswordHash = $user->getPassword();
+
+        // Verify current password
+        if (!password_verify($currentPassword, $currentPasswordHash)) {
+            $sessionManager->set('change_password_error', 'The current password ' . $currentPassword . ' is incorrect.');
+            header('Location: /profile/change_password');
+            exit;
+        }
+
+        // Update user's password
+        $newPasswordHash = password_hash($newPassword, PASSWORD_DEFAULT);
+        $user->setPassword($newPasswordHash);
+        $userRepository->updateUser($user);
+
+        // Redirect to dashboard with success message
+        $sessionManager->set('change_password_success', 'Your password has been changed successfully.');
+        header('Location: /profile/change_password');
+        exit;
+    }
 }
 ?>
