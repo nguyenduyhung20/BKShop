@@ -1,0 +1,33 @@
+/* Footer styles */
+footer {
+    padding: 1rem;
+    background-color: rgb(92,157,255);
+    color: white;
+    font-family: 'Manrope';
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+footer .row {
+    align-items: center;
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 767px) {
+    footer {
+        font-size: 0.875rem;
+    }
+
+    footer .row {
+        flex-direction: column;
+    }
+
+    footer .col-md-4 {
+        margin-bottom: 0.5rem;
+    }
+}

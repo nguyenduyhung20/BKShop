@@ -1,3 +1,6 @@
+/* Import font */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
+
 nav {
     height: 50px;
     margin-bottom: 10px;
@@ -104,11 +107,6 @@ h3 a {
     color: #0fa3f8;
 }
 
-footer {
-    padding: 15px;
-    color: white;
-    text-align: center;
-}
 
 @media only screen and (max-width: 992px) {
     body {
@@ -129,8 +127,5 @@ footer {
         font-size: 15px;
         line-height: 15px;
         padding: 0 20px;
-    }
-    footer {
-        font-size: 12px;
     }
 }

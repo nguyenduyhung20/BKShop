@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="css/register.css">
     <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/footer.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -28,7 +29,7 @@
     </nav>
     <div class="container-fluid content">
         <div class="col-md-3"></div>
-        <div class="login col-md-6 p-3 my-2 col-12">
+        <div class="login col-md-6 p-3 my-4 col-12">
             <h2 class="text-center pt-3">Sign in</h2>
             <?php if (!empty($errorMessage)): ?>
                 <p>
