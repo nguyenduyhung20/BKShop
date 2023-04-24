@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
+nav {
+    height: 50px;	
+	margin-bottom: 10px;
+	background-color: rgb(92,157,255);
+	font-family: 'Manrope';
+    font-size: 20px;
+	font-weight: 600;
+}
+
+body{
+	background-image: url("../img/Background.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #0fa3f8;
+}
+
+.login{
+	border-radius: 15px;
+	background-color: rgb(234, 247, 251);
+	margin: auto;
+}
+
+.input-field{
+	position: relative;
+	height: 50px;
+ 	width: 100%;
+  	margin-top: 25px;
+	text-align: center;
+} 
+
+.input-field input {
+    height: 100%;
+    width: 80%;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-family: 'Manrope';
+    font-style: normal;
+    padding-left: 50px;
+    transition: all 0.2s ease;
+}
+
+.input-field img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 23px;
+    transition: all 0.2s ease;
+	padding: 10px;
+	width: 50px;
+	height: 50px;
+}
+
+.input-field button {
+    height: 100%;
+    width: 80%;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-family: 'Manrope';
+    font-style: normal;
+    padding-left: 50px;
+    transition: all 0.2s ease;
+}
+
+.button button {
+    padding-left: 0;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background-color: #95D9FF;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 44px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+} 
+
+h3 a{
+	text-align: left;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 0 60px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #0fa3f8;
+}
+
+footer {
+	padding: 15px;
+	color:white;
+	text-align: center;	
+}
+@media only screen and (max-width: 992px) {
+    body{ 
+        height: 1400px;
+    }
+    h3 a{
+        font-size: 20px;
+        line-height: 20px;
+        padding: 0 (0 20px);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body{  
+        height: 800px;
+    }
+    h3 a{
+        font-size: 15px;
+        line-height: 15px;
+        padding: 0 20px;
+    }
+    footer{
+        font-size: 12px;
+    }
+}
