@@ -7,7 +7,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-image: url("../img/Background.png");
-    min-height: 800px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -54,7 +53,6 @@ nav {
     font-size: 1.125rem;
     font-family: 'Manrope', sans-serif;
     font-style: normal;
-    margin-right: 1rem;
 }
 
 .input-field input {
@@ -148,26 +146,6 @@ nav {
     color: #0fa3f8;
 }
 
-/* Footer styles */
-footer {
-    padding: 1rem;
-    background-color: rgb(92,157,255);
-    color: white;
-    font-family: 'Manrope';
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-footer .row {
-    align-items: center;
-}
-
-footer img {
-    width: 30px;
-    height: 30px;
-    margin-right: 0.5rem;
-}
-
 /* Media queries */
 @media (max-width: 575.98px) {
     nav {
@@ -199,26 +177,6 @@ footer img {
     }
 }
 
-@media (max-width: 767px) {
-    footer {
-        font-size: 0.875rem;
-    }
-
-    footer .row {
-        flex-direction: column;
-    }
-
-    footer .col-md-4 {
-        margin-bottom: 0.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    footer img {
-        width: 25px;
-        height: 25px;
-    }
-}
 
 @media only screen and (max-width: 992px) {
     body {
@@ -240,9 +198,6 @@ footer img {
     .login h3 a {
         font-size: 0.9375rem;
         line-height: 0.9375rem;
-    }
-    footer {
-        font-size: 0.75rem;
     }
 }
 
