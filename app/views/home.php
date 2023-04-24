@@ -102,7 +102,7 @@
                 </a>
             </div>
             <div class="col-md-2 col-sm-2 d-none d-sm-block news">
-                <a href="/new">
+                <a href="/news">
                     Tin tức
                 </a>
             </div>

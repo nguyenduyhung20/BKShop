@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Giỏ hàng</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link type="text/css" rel="stylesheet" href="css/detail.css">
-  <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-  <script src="detail.js"></script>
+    <title>Giỏ hàng</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="css/detail.css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <script src="detail.js"></script>
 </head>
+
 <body>
     <div class="container-fluid">
         <!-- Header -->
@@ -22,12 +30,13 @@
                 <div id="mySidenav" class="sidenav pt-5">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <div class="dropdown">
-                        <a class="dropdown-toggle" role="button" data-toggle="dropdown" id="user_text" aria-expanded="false">
+                        <a class="dropdown-toggle" role="button" data-toggle="dropdown" id="user_text"
+                            aria-expanded="false">
                             Tài khoản
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="login.php">Đăng nhập</a>
-                            <a class="dropdown-item" href="sigin.php">Đăng ký</a>
+                            <a class="dropdown-item" href="/login">Đăng nhập</a>
+                            <a class="dropdown-item" href="/register">Đăng ký</a>
                         </div>
                     </div>
                     <a href="#">Giỏ hàng</a>
@@ -38,14 +47,14 @@
                     <a href="#">Thanh toán</a>
                     <a href="#">Liên hệ</a>
                 </div>
-                <button class="btn sidebar d-md-none"  onclick="openNav()" type="submit">
+                <button class="btn sidebar d-md-none" onclick="openNav()" type="submit">
                     <i class="fa fa-bars"></i>
                 </button>
                 <!-- Logo of web page -->
-                <a href="home.php" class="px-2">
+                <a href="/" class="px-2">
                     <img src="img/Logo.png" alt="logo" width="30" height="30" class="d-inline-block align-text-top">
                     BKShop
-                </a>            
+                </a>
             </div>
             <!-- Search bar -->
             <div class="col-md-6 search">
@@ -62,21 +71,22 @@
             <div class="col-md-2 d-none d-sm-block" style="font-size:18px;">
                 <div class="dropdown">
                     <i class="bi bi-person-circle" style="font-size:20px;"></i>
-                    <a class="dropdown-toggle" role="button" data-toggle="dropdown" id="user_text" aria-expanded="false">
+                    <a class="dropdown-toggle" role="button" data-toggle="dropdown" id="user_text"
+                        aria-expanded="false">
                         Tài khoản
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="login.php">Đăng nhập</a>
-                        <a class="dropdown-item" href="sigin.php">Đăng ký</a>
+                        <a class="dropdown-item" href="/login">Đăng nhập</a>
+                        <a class="dropdown-item" href="/register">Đăng ký</a>
                     </div>
-                </div>   
+                </div>
             </div>
             <!-- Shopping cart -->
             <div class="col-md-2 d-none d-sm-block" style="font-size:18px;">
                 <a href="#" id="shopcart_text">
                     <i class="bi bi-cart3" style="font-size:20px;"></i>
                     Giỏ hàng
-                </a>           
+                </a>
             </div>
         </div>
         <div class="row cus_navbar">
@@ -84,42 +94,42 @@
                 <div class="dropdown">
                     <div class="dropbtn"><i class="fa fa-bars"></i> Danh mục sản phẩm</div>
                     <div class="dropdown-content">
-                    <ul>
-                        <li><a href="#"><i class="bi bi-laptop"></i><span>Laptop</span></a><br></li>
-                        <li><a href="#"><i class="bi bi-pc-display"></i><span>PC</span></a><br></li>
-                        <li><a href="#"><i class="bi bi-mouse"></i><span>Chuột máy tính</span></a><br></li>
-                        <li><a href="#"><i class="bi bi-keyboard"></i><span>Bàn phím</span></a><br></li>
-                        <li><a href="#"><i class="bi bi-headphones"></i><span>Tai nghe</span></a><br></li>
-                        <li><a href="#"><i class="bi bi-cpu"></i><span>Linh kiện</span></a><br></li>
-                        <li><a href="#"><i class="bi bi-tv"></i><span>Màn hình</span></a><br></li>
-                    </ul>
+                        <ul>
+                            <li><a href="#"><i class="bi bi-laptop"></i><span>Laptop</span></a><br></li>
+                            <li><a href="#"><i class="bi bi-pc-display"></i><span>PC</span></a><br></li>
+                            <li><a href="#"><i class="bi bi-mouse"></i><span>Chuột máy tính</span></a><br></li>
+                            <li><a href="#"><i class="bi bi-keyboard"></i><span>Bàn phím</span></a><br></li>
+                            <li><a href="#"><i class="bi bi-headphones"></i><span>Tai nghe</span></a><br></li>
+                            <li><a href="#"><i class="bi bi-cpu"></i><span>Linh kiện</span></a><br></li>
+                            <li><a href="#"><i class="bi bi-tv"></i><span>Màn hình</span></a><br></li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <div class="col-md-2 intro ml-5">
-                <a href="introduction.php">
+                <a href="/introduction">
                     Giới thiệu
                 </a>
             </div>
             <div class="col-md-2 news">
-                <a href="new.php">
+                <a href="/news">
                     Tin tức
                 </a>
             </div>
             <div class="col-md-2 payment">
-                <a href="payment.php">
+                <a href="/payment">
                     Thanh toán
-                </a>           
+                </a>
             </div>
             <div class="col-md-2 contact">
-                <a href="contact.php">
+                <a href="/contact">
                     Liên hệ
-                </a>           
+                </a>
             </div>
         </div>
         <nav style="margin-left: 30px;" aria-label="breadcrumb">
             <ol class="breadcrumb bg-transparent border-bottom">
-                <li class="breadcrumb-item"><a href="home.php">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Giỏ hàng</li>
             </ol>
         </nav>
@@ -180,10 +190,12 @@
             </tbody>
         </table>
         <div class="d-flex justify-content-between mb-3">
-            <button class="btn" style="background-color:#FFD700; font-weight:500;" onclick="location.href='home.php'" type="button">
+            <button class="btn" style="background-color:#FFD700; font-weight:500;" onclick="location.href='/'"
+                type="button">
                 TIẾP TỤC MUA HÀNG
             </button>
-            <button class="btn" style="background-color:#00B2EE; font-weight:500;" onclick="location.href='payment.php'" type="button"> 
+            <button class="btn" style="background-color:#00B2EE; font-weight:500;" onclick="location.href='/payment'"
+                type="button">
                 THANH TOÁN
             </button>
         </div>
@@ -200,7 +212,7 @@
             <div class="col-md-4">
                 <h4>HỆ THỐNG CỬA HÀNG</h4>
                 <p>- Địa chỉ 1: 268 Lý Thường Kiệt, Phường 14, Quận 10, Thành phố Hồ Chí Minh, Việt Nam</p>
-                <p>- Địa chỉ 2: Đông Hòa, Dĩ An, Bình Dương, Việt Nam</p>   
+                <p>- Địa chỉ 2: Đông Hòa, Dĩ An, Bình Dương, Việt Nam</p>
             </div>
             <div class="col-md-4">
                 <h4>THÔNG TIN VÀ CHÍNH SÁCH</h4>
@@ -214,4 +226,5 @@
     </footer>
     <script src="js/detail.js"></script>
 </body>
+
 </html>
