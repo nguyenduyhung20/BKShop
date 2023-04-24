@@ -6,18 +6,21 @@ require_once 'app/models/RBAC.php';
 require_once 'app/services/AuthenticationService.php';
 require_once 'app/models/UserRepository.php';
 
-class UserController {
+class UserController
+{
     private $authService;
     private $userRepository;
     private $sessionManager;
 
-    public function __construct(AuthenticateService $authService, UserRepository $userRepository, SessionManager $sessionManager) {
+    public function __construct(AuthenticateService $authService, UserRepository $userRepository, SessionManager $sessionManager)
+    {
         $this->authService = $authService;
         $this->userRepository = $userRepository;
         $this->sessionManager = $sessionManager;
     }
 
-    public function login() {
+    public function login()
+    {
         if ($this->authService->isLoggedIn()) {
             header("Location: /");
             exit;
@@ -37,7 +40,8 @@ class UserController {
         require_once 'app/views/login.php';
     }
 
-    public function logout() {
+    public function logout()
+    {
         if (isset($_GET['action']) && $_GET['action'] == 'logout') {
             $this->authService->logout();
             header("Location: /");
@@ -45,7 +49,8 @@ class UserController {
         }
     }
 
-    public function register() {
+    public function register()
+    {
         if ($this->authService->isLoggedIn()) {
             header("Location: /");
             exit;
@@ -76,5 +81,34 @@ class UserController {
         require_once 'app/views/register.php';
     }
 
+    public function profile()
+    {
+        $loggedInUser = $this->authService->getLoggedInUser();
+        if (!$loggedInUser) {
+            header('Location: /');
+            exit;
+        }
+        $user = $loggedInUser;
+        require_once 'app/views/profile.php';
+    }
+
+    public function updateProfile($data)
+    {
+        $loggedInUser = $this->authService->getLoggedInUser();
+        if (!$loggedInUser) {
+            header('Location: index.php?action=login');
+            exit;
+        }
+
+        $loggedInUser->setFirstName($data['first_name']);
+        $loggedInUser->setLastName($data['last_name']);
+        $loggedInUser->setEmail($data['email']);
+        $loggedInUser->setPhone($data['phone']);
+        $loggedInUser->setAddress($data['address']);
+
+        $this->userRepository->updateUser($loggedInUser);
+        header('Location: /profile');
+    }
+    
 }
 ?>
