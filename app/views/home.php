@@ -75,14 +75,14 @@
                         Tài khoản
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="login.php">Đăng nhập</a>
-                        <a class="dropdown-item" href="sigin.php">Đăng ký</a>
+                        <a class="dropdown-item" href="/login">Đăng nhập</a>
+                        <a class="dropdown-item" href="/register">Đăng ký</a>
                     </div>
                 </div>
             </div>
             <!-- Shopping cart -->
             <div class="col-md-2 d-none d-sm-block" style="font-size:18px;">
-                <a href="cart.php" id="shopcart_text">
+                <a href="/cart" id="shopcart_text">
                     <i class="bi bi-cart3" style="font-size:20px;"></i>
                     Giỏ hàng
                 </a>
@@ -144,7 +144,7 @@
         </div>
         <div class="pc_top">
             PC BÁN CHẠY NHẤT
-            <a style="float:right; text-decoration: none; color: white;" href="list.php">Xem tất cả ></a>
+            <a style="float:right; text-decoration: none; color: white;" href="/list">Xem tất cả ></a>
         </div>
         <div class="d-flex flex-wrap justify-content-between mx-2">
             <div class="product col-md-2">
