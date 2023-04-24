@@ -25,30 +25,30 @@
             BKShop
         </a>
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid content">
         <div class="col-md-3"></div>
-        <div class="login col-md-6 p-2 my-4 col-12">
-            <h2 class="text-center pt-3">Đăng nhập </h2>
+        <div class="login col-md-6 p-3 my-4 col-12">
+            <h2 class="text-center pt-3">Login</h2>
             <?php if (!empty($errorMessage)): ?>
                 <p>
                     <?php echo $errorMessage; ?>
                 </p>
             <?php endif; ?>
-            <form method="post">
+            <form class="p-2" method="post">
                 <div class="input-field">
                     <img src="img/user.png" alt="">
-                    <input type="text" name="username" id="username" placeholder="Nhập tên đăng nhập" required />
+                    <input type="text" name="username" id="username" placeholder="Enter username" required />
                 </div>
                 <div class="input-field">
                     <img src="img/pass.png" alt="">
-                    <input type="password" name="password" id="password" placeholder="Nhập mật khẩu" required />
+                    <input type="password" name="password" id="password" placeholder="Enter password" required />
                 </div>
                 <div class="input-field button">
-                    <button type="submit" name="login" value="Login">Đăng Nhập</button>
+                    <button type="submit" name="login" value="Login">Login</button>
                 </div>
             </form>
-            <h3> <a href="/register">Bạn chưa có tài khoản? Tạo tài khoản ngay</a></h3>
-            <h3> <a href="/login">Quên mật khẩu? </a></h3>
+            <h3> <a href="/register">Don't have an account? Register now</a></h3>
+            <h3> <a href="/forgot-password">Forgot password? </a></h3>
         </div>
     </div>
     <?php require_once "footer.php" ?>
