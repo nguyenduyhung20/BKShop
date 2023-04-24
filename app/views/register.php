@@ -26,9 +26,9 @@
             BKShop
         </a>
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid content">
         <div class="col-md-3"></div>
-        <div class="login col-md-6 p-2 my-2 col-12">
+        <div class="login col-md-6 p-3 my-2 col-12">
             <h2 class="text-center pt-3">Sign in</h2>
             <?php if (!empty($errorMessage)): ?>
                 <p>
@@ -68,7 +68,9 @@
                     <input type="submit" name="register" value="Register">
                 </div>
             </form>
-            <h3>Already have an account? <a href="/login">Login</a></h3>
+            <div class="text-center">
+                <h3>Already have an account? <a href="/login">Login</a></h3>
+            </div>
         </div>
         <div class="col-md-3"></div>
     </div>
