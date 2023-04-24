@@ -22,48 +22,54 @@
 </head>
 
 <body>
-    <div class="sidenav">
-        <a href="/profile">Current User</a>
-        <a href="/profile/change_info">Change Info</a>
-        <a href="/profile/change_password">Change Password</a>
-        <a href="/profile/setting_site">Site Settings</a>
-    </div>
-    <div class="container-fluid">
-        <?php include 'header.php'; ?>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="list-group">
-                    <a href="/profile" class="list-group-item list-group-item-action">Current User</a>
-                    <a href="/profile/change_info" class="list-group-item list-group-item-action">Change
-                        Info</a>
-                    <a href="/profile/change_password" class="list-group-item list-group-item-action">Change
-                        Password</a>
-                    <a href="/profile/site_settings" class="list-group-item list-group-item-action">Site
-                        Settings</a>
-                </div>
-            </div>
-            <div class="col-md-9">
-                <?php
-                $action = $_GET['action'];
-                switch ($action) {
-                    case 'change_info':
-                        require_once 'change_info.php';
-                        break;
-                    case 'change_password':
-                        require_once 'change_password.php';
-                        break;
-                    case 'site_settings':
-                        require_once 'site_settings.php';
-                        break;
-                    default: // Show the Current User view by default
-                        require_once 'user_info.php';
-                        break;
-                }
-                ?>
-            </div>
+    <div class="wrapper">
+        <div class="sidenav">
+            <a href="/profile">Current User</a>
+            <a href="/profile/change_info">Change Info</a>
+            <a href="/profile/change_password">Change Password</a>
+            <a href="/profile/setting_site">Site Settings</a>
+        </div>
+        <div class="content">
+            <div class="container-fluid">
+                <?php include 'header.php'; ?>
+                <div class="row ">
+                    <div class="col-md-3 py-3">
+                        <div class="list-group">
+                            <a href="/profile" class="list-group-item list-group-item-action">Current User</a>
+                            <a href="/profile/change_info" class="list-group-item list-group-item-action">Change
+                                Info</a>
+                            <a href="/profile/change_password" class="list-group-item list-group-item-action">Change
+                                Password</a>
+                            <a href="/profile/site_settings" class="list-group-item list-group-item-action">Site
+                                Settings</a>
+                        </div>
+                    </div>
+                    <div class="col-md-9 py-3">
+                        <?php
+                        $action = $_GET['action'];
+                        switch ($action) {
+                            case 'change_info':
+                                require_once 'change_info.php';
+                                break;
+                            case 'change_password':
+                                require_once 'change_password.php';
+                                break;
+                            case 'site_settings':
+                                require_once 'site_settings.php';
+                                break;
+                            default: // Show the Current User view by default
+                                require_once 'user_info.php';
+                                break;
+                        }
+                        ?>
+                    </div>
 
+                </div>
+
+            </div>
         </div>
 
+        <?php include 'footer.php'; ?>
+
     </div>
-    <?php include 'footer.php'; ?>
 </body>
