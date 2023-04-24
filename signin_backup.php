@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <title>Login</title>
+    <title>Si</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="text/css" rel="stylesheet" href="css/login.css">
+    <link type="text/css" rel="stylesheet" href="css/signin.css">
     <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -20,38 +20,41 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" href="login.php">
             <img src="img/Logo.png" alt="logo" width="30" height="30" class="d-inline-block align-text-top">
             BKShop
         </a>
     </nav>
-    <div class="container-fluid content">
+    <div class="container-fluid">
         <div class="col-md-3"></div>
-        <div class="login col-md-6 p-3 my-4 col-12">
-            <h2 class="text-center pt-3">Login</h2>
-            <?php if (!empty($errorMessage)): ?>
-                <p>
-                    <?php echo $errorMessage; ?>
-                </p>
-            <?php endif; ?>
-            <form class="p-2" method="post">
+        <div class="login col-md-6 p-2 my-2 col-12">
+            <h2 class="text-center pt-3">Đăng ký </h2>
+            <form action="" method="post">
                 <div class="input-field">
                     <img src="img/user.png" alt="">
-                    <input type="text" name="username" id="username" placeholder="Enter username" required />
+                    <input type="text" name="username" placeholder="Nhập tên đăng nhập" required />
+                </div>
+                <div class="input-field">
+                    <img src="img/mail.png" alt="">
+                    <input type="text" name="email" placeholder="Nhập email" required />
                 </div>
                 <div class="input-field">
                     <img src="img/pass.png" alt="">
-                    <input type="password" name="password" id="password" placeholder="Enter password" required />
+                    <input type="password" name="password" placeholder="Nhập mật khẩu" required />
+                </div>
+                <div class="input-field">
+                    <img src="img/pass.png" alt="">
+                    <input type="password" name="repassword" placeholder="Nhập lại mật khẩu" required />
                 </div>
                 <div class="input-field button">
-                    <button type="submit" name="login" value="Login">Login</button>
+                    <button type="submit" name="submit">Tạo tài khoản</button>
                 </div>
             </form>
-            <h3> <a href="/register">Don't have an account? Register now</a></h3>
-            <h3> <a href="/forgot-password">Forgot password? </a></h3>
+            <h3> Bạn đã có tài khoản? <a href="login.php"> Đăng nhập </a></h3>
         </div>
+        <div class="col-md-3"></div>
     </div>
-    <?php require_once "footer.php" ?>
+
 </body>
 
 </html>

@@ -1,15 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
 nav {
-    height: 50px;	
-	margin-bottom: 10px;
-	background-color: rgb(92,157,255);
-	font-family: 'Manrope';
+    height: 50px;
+    margin-bottom: 10px;
+    background-color: rgb(92, 157, 255);
+    font-family: 'Manrope';
     font-size: 20px;
-	font-weight: 600;
+    font-weight: 600;
 }
 
-body{
-	background-image: url("../img/Background.png");
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url("../img/Background.png");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,19 +19,25 @@ body{
     background-color: #0fa3f8;
 }
 
-.login{
-	border-radius: 15px;
-	background-color: rgb(234, 247, 251);
-	margin: auto;
+
+.content {
+    flex: 1;
 }
 
-.input-field{
-	position: relative;
-	height: 50px;
- 	width: 100%;
-  	margin-top: 25px;
-	text-align: center;
-} 
+
+.login {
+    border-radius: 15px;
+    background-color: rgb(234, 247, 251);
+    margin: auto;
+}
+
+.input-field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 25px;
+    text-align: center;
+}
 
 .input-field input {
     height: 100%;
@@ -50,9 +58,9 @@ body{
     transform: translateY(-50%);
     font-size: 23px;
     transition: all 0.2s ease;
-	padding: 10px;
-	width: 50px;
-	height: 50px;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
 }
 
 .input-field button {
@@ -81,10 +89,10 @@ body{
     line-height: 44px;
     cursor: pointer;
     transition: all 0.3s ease;
-} 
+}
 
-h3 a{
-	text-align: left;
+h3 a {
+    text-align: left;
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 500;
@@ -97,31 +105,32 @@ h3 a{
 }
 
 footer {
-	padding: 15px;
-	color:white;
-	text-align: center;	
+    padding: 15px;
+    color: white;
+    text-align: center;
 }
+
 @media only screen and (max-width: 992px) {
-    body{ 
+    body {
         height: 1400px;
     }
-    h3 a{
+    h3 a {
         font-size: 20px;
         line-height: 20px;
-        padding: 0 (0 20px);
+        padding: 0 20px;
     }
 }
 
 @media only screen and (max-width: 480px) {
-    body{  
+    body {
         height: 800px;
     }
-    h3 a{
+    h3 a {
         font-size: 15px;
         line-height: 15px;
         padding: 0 20px;
     }
-    footer{
+    footer {
         font-size: 12px;
     }
 }
