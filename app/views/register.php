@@ -29,7 +29,7 @@
     </nav>
     <div class="container-fluid content">
         <div class="col-md-3"></div>
-        <div class="login col-md-6 p-3 my-2 col-12">
+        <div class="login col-md-6 p-3 my-4 col-12">
             <h2 class="text-center pt-3">Sign in</h2>
             <?php if (!empty($errorMessage)): ?>
                 <p>
