@@ -50,7 +50,6 @@
             <h3> <a href="/register">Bạn chưa có tài khoản? Tạo tài khoản ngay</a></h3>
             <h3> <a href="/login">Quên mật khẩu? </a></h3>
         </div>
-        <div class="col-md-3"></div>
     </div>
     <?php require_once "footer.php" ?>
 </body>

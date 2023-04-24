@@ -1,72 +1,133 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
+
 nav {
-    height: 50px;	
-	margin-bottom: 10px;
-	background-color: rgb(92,157,255);
-	font-family: 'Manrope';
-    font-size: 20px;
-	font-weight: 600;
+    height: 50px;
+    margin-bottom: 10px;
+    background-color: rgb(92,157,255);
+    font-family: 'Manrope';
+    font-size: 1.25rem;
+    font-weight: 600;
 }
 
-body{
-	background-image: url("../img/Background.png");
-    height: 800px;
+body {
+    background-image: url("../img/Background.png");
+    min-height: 800px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #0fa3f8;
 }
-
-.login{
-	border-radius: 15px;
-	background-color: rgb(234, 247, 251);
-	margin: auto;
+.login {
+    border-radius: 15px;
+    background-color: rgb(234, 247, 251);
+    margin: auto;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
 }
 
-.input-field{
-	position: relative;
-	height: 50px;
- 	width: 100%;
-  	margin-top: 20px;
-	text-align: center;
-} 
+.input-field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input-field label {
+    font-size: 1.125rem;
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    margin-right: 1rem;
+}
 
 .input-field input {
     height: 100%;
-    width: 80%;
+    width: calc(100% - 6.25rem);
     border-radius: 8px;
-    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     outline: none;
-    font-size: 18px;
-    font-family: 'Manrope';
+    font-size: 1.125rem;
+    font-family: 'Manrope', sans-serif;
     font-style: normal;
-    padding-left: 50px;
     transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.input-field input:focus {
+    border-color: rgba(0, 0, 0, 0.4);
 }
 
 .input-field img {
     position: absolute;
     top: 50%;
+    left: 10%;
     transform: translateY(-50%);
     font-size: 23px;
     transition: all 0.2s ease;
-	padding: 10px;
-	width: 50px;
-	height: 50px;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
 }
 
 .input-field button {
-    height: 100%;
-    width: 80%;
+    height: 50px;
+    width: 100%;
     border-radius: 15px;
     border: none;
     outline: none;
-    font-size: 20px;
-    font-family: 'Manrope';
+    font-size: 1.25rem;
+    font-family: 'Manrope', sans-serif;
     font-style: normal;
-    padding-left: 50px;
+    background-color: #007BFF;
+    color: #FFF;
+    cursor: pointer;
     transition: all 0.2s ease;
+    box-sizing: border-box;
 }
+
+.input-field.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin-top: 1.25rem;
+}
+
+.input-field button:hover {
+    background-color: #0056B3;
+}
+
+@media (max-width: 575.98px) {
+    .input-field label {
+        font-size: 1rem;
+    }
+
+    .input-field input {
+        font-size: 1rem;
+    }
+
+    .input-field button {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .input-field.button button {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .input-field.button button {
+        font-size: 0.875rem;
+    }
+}
+
 
 .button button {
     padding-left: 0;
@@ -77,60 +138,104 @@ body{
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 44px;
+    font-size: 1.25rem;
+    line-height: 2.75rem;
     cursor: pointer;
     transition: all 0.3s ease;
-} 
+}
 
-.login h3{
+.login h3 {
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
     color: #000000;
     margin-top: 10px;
-    padding: 0 55px;
+    padding: 0 3.4375rem;
 }
-.login h3 a{
+
+.login h3 a {
     text-decoration: none;
     color: #0fa3f8;
 }
 
+/* Footer style */
+
 footer {
-	padding: 15px;
-	color:white;
-	text-align: center;	
+    padding: 1rem;
+    background-color: rgb(92,157,255);
+    color: white;
+    font-family: 'Manrope';
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+footer .row {
+    align-items: center;
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 767px) {
+    footer {
+        font-size: 0.875rem;
+    }
+
+    footer .row {
+        flex-direction: column;
+    }
+
+    footer .col-md-4 {
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    footer img {
+        width: 25px;
+        height: 25px;
+    }
+}
+/* 
+footer */
+
+@media (max-width: 575.98px) {
+    nav {
+        font-size: 1rem;
+    }
 }
 
 @media only screen and (max-width: 992px) {
-    body{ 
+    body {
         height: 1400px;
     }
-	.login h3{
-        padding: 0 0 0 25px;
-	}
-    .login h3 a{
-        font-size: 20px;
-        line-height: 20px;
+    .login h3 {
+        padding: 0 0 0 1.5625rem;
+    }
+    .login h3 a {
+        font-size: 1.25rem;
+        line-height: 1.25rem;
     }
 }
 
 @media only screen and (max-width: 480px) {
-    body{  
+    body {
         height: 800px;
     }
-    .login h3{
-        font-size: 15px;
-        padding: 0 0 0 35px;
+    .login h3 {
+        font-size: 0.9375rem;
+        padding: 0 0 0 2.1875rem;
     }
-    .login h3 a{
-        font-size: 15px;
-        line-height: 15px;
+    .login h3 a {
+        font-size: 0.9375rem;
+        line-height: 0.9375rem;
     }
-    footer{
-        font-size: 12px;
+    footer {
+        font-size: 0.75rem;
     }
 }
-    
