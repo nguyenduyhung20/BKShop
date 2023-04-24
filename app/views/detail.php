@@ -26,8 +26,8 @@
                             Tài khoản
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="login.php">Đăng nhập</a>
-                            <a class="dropdown-item" href="sigin.php">Đăng ký</a>
+                            <a class="dropdown-item" href="/login">Đăng nhập</a>
+                            <a class="dropdown-item" href="/register">Đăng ký</a>
                         </div>
                     </div>
                     <a href="#">Giỏ hàng</a>
@@ -42,7 +42,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <!-- Logo of web page -->
-                <a href="home.php" class="px-2">
+                <a href="/" class="px-2">
                     <img src="img/Logo.png" alt="logo" width="30" height="30" class="d-inline-block align-text-top">
                     BKShop
                 </a>            
@@ -66,14 +66,14 @@
                         Tài khoản
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="login.php">Đăng nhập</a>
-                        <a class="dropdown-item" href="sigin.php">Đăng ký</a>
+                        <a class="dropdown-item" href="/login">Đăng nhập</a>
+                        <a class="dropdown-item" href="/register">Đăng ký</a>
                     </div>
                 </div>   
             </div>
             <!-- Shopping cart -->
             <div class="col-md-2 d-none d-sm-block" style="font-size:18px;">
-                <a href="cart.php" id="shopcart_text">
+                <a href="/cart" id="shopcart_text">
                     <i class="bi bi-cart3" style="font-size:20px;"></i>
                     Giỏ hàng
                 </a>           
@@ -97,29 +97,29 @@
                 </div>
             </div>
             <div class="col-md-2 intro ml-5">
-                <a href="introduction.php">
+                <a href="/introduction">
                     Giới thiệu
                 </a>
             </div>
             <div class="col-md-2 news">
-                <a href="new.php">
+                <a href="/news">
                     Tin tức
                 </a>
             </div>
             <div class="col-md-2 payment">
-                <a href="payment.php">
+                <a href="/payment">
                     Thanh toán
                 </a>           
             </div>
             <div class="col-md-2 contact">
-                <a href="contact.php">
+                <a href="/contact">
                     Liên hệ
                 </a>           
             </div>
         </div>
         <nav style="margin-left: 30px;" aria-label="breadcrumb">
             <ol class="breadcrumb bg-transparent border-bottom">
-                <li class="breadcrumb-item"><a href="home.php">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
                 <li class="breadcrumb-item"><a href="#"></a>Danh mục sản phẩm</li>
                 <li class="breadcrumb-item active" aria-current="page">PC</li>
             </ol>
