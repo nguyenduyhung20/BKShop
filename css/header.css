@@ -83,8 +83,10 @@
     color: #000000;
 }
 .cus_navbar .products{
+    background-color: white;
     border: 0.5px solid rgba(70, 70, 70, 0.844);
     border-radius: 5px;
+    margin-left: 2rem;
 }
 .cus_navbar .intro, 
 .cus_navbar .contact, 
@@ -93,6 +95,7 @@
     border: 0.5px solid rgba(70, 70, 70, 0.844);
     border-radius: 5px;
     margin-left: 15px;
+    margin-right: 2rem;
 }
 .cus_navbar .intro:hover, 
 .cus_navbar .contact:hover, 
