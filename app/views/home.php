@@ -65,7 +65,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <!-- Logo of web page -->
-                <a href="" class="px-2">
+                <a href="/" class="px-2">
                     <img src="img/Logo.png" alt="logo" width="30" height="30" class="d-inline-block align-text-top">
                     BKShop
                 </a>
@@ -117,7 +117,7 @@
         <!-- Task bar -->
         <div class="row cus_navbar px-2">
             <div class="col-md-2 col-sm-3 d-none d-sm-block products">
-                <a href="">
+                <a href="/">
                     <i class="fa fa-bars"></i>
                     Sản phẩm
                 </a>

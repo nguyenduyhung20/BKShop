@@ -56,7 +56,7 @@
                     </div>
                     <a href="/cart">Giỏ hàng</a>
                     <hr>
-                    <a href="">Sản phẩm</a>
+                    <a href="/">Sản phẩm</a>
                     <a href="/introduction">Giới thiệu</a>
                     <a href="#">Tin tức</a>
                     <a href="/payment">Thanh toán</a>

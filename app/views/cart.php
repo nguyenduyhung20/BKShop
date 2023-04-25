@@ -66,7 +66,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <!-- Logo of web page -->
-                <a href="" class="px-2">
+                <a href="/" class="px-2">
                     <img src="img/Logo.png" alt="logo" width="30" height="30" class="d-inline-block align-text-top">
                     BKShop
                 </a>
