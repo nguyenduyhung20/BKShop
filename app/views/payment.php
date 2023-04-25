@@ -5,6 +5,7 @@
     <title>Thanh toán</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="css/header.css">
     <link type="text/css" rel="stylesheet" href="css/payment.css">
     <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -26,7 +27,7 @@
         <?php
         require_once "header.php";
         ?>
-        <nav style="margin-left: 30px;" aria-label="breadcrumb">
+        <nav class="text-center" aria-label="breadcrumb">
             <ol class="breadcrumb bg-transparent border-bottom">
                 <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Thanh toán</li>
