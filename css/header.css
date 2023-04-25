@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
+
+/* Header */
+.cus_header{
+    height: 60px;	
+	background-color: rgb(25 ,109,236);
+    font-size: 20px;
+    line-height: 60px;
+    font-weight: 600;
+}
+
+    /* Side navigation for phone */
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #E9F2F2;
+        overflow-x: hidden;
+        transition: 0.5s;
+        text-align: left;
+    }
+    
+    .sidenav a {
+        padding: 0 20px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+  
+.cus_header div a{
+    text-decoration: none;
+    color: #000000;
+}
+.cus_header form{
+    padding: auto 0;
+    margin: 10px 0;
+    width: 75%;
+}
+.cus_header form input{
+	background: white;
+	border-radius: 45px;
+    border: 1px solid rgb(25 ,109,236);
+}
+.cus_header form button{
+	background: #0066FF;
+	border-radius: 45px;
+}
+.dropdown .dropdown-menu{
+    position: absolute;
+    top: 15px;
+}
+.dropdown .dropdown-menu .dropdown-item{
+    line-height: 30px;
+}
+
+/* Navbar */
+.cus_navbar{
+    height: 30px;
+    line-height: 30px;
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+.cus_navbar a{
+    color: #000000;
+    font-weight: 600;
+}
+.cus_navbar a:hover {
+    text-decoration: none;
+    color: #000000;
+}
+.cus_navbar .products{
+    background-color: #00DD00;
+    border: 0.5px solid rgba(70, 70, 70, 0.844);
+    border-radius: 5px;
+    margin-left: 55px;
+}
+.cus_navbar .intro, 
+.cus_navbar .contact, 
+.cus_navbar .payment, 
+.cus_navbar .news{
+    border: 0.5px solid rgba(70, 70, 70, 0.844);
+    border-radius: 5px;
+    margin-left: 15px;
+}
+.cus_navbar .intro:hover, 
+.cus_navbar .contact:hover, 
+.cus_navbar .payment:hover, 
+.cus_navbar .news:hover{
+    background-color: rgb(110, 189, 235);
+}
