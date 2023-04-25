@@ -99,7 +99,7 @@ class UserController
     {
         $loggedInUser = $this->authService->getLoggedInUser();
         if (!$loggedInUser) {
-            header('Location: index.php?action=login');
+            header('Location: /login');
             exit;
         }
 

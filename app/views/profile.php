@@ -4,8 +4,9 @@
     <title>Profile</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/profile.css">
     <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/profile.css">
+
     <link rel="stylesheet" href="/css/footer.css">
     <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -23,12 +24,6 @@
 
 <body>
     <div class="wrapper">
-        <div class="sidenav">
-            <a href="/profile">Current User</a>
-            <a href="/profile/change_info">Change Info</a>
-            <a href="/profile/change_password">Change Password</a>
-            <a href="/profile/setting_site">Site Settings</a>
-        </div>
         <div class="content">
             <div class="container-fluid">
                 <?php include 'header.php'; ?>
@@ -42,6 +37,9 @@
                                 Password</a>
                             <!-- <a href="/profile/site_settings" class="list-group-item list-group-item-action">Site
                                 Settings</a> -->
+                            <?php if ($authService->getLoggedInUser()->getRole() == 'ADMIN') { ?>
+                                <a href="/admin" class="list-group-item list-group-item-action">View Users</a>
+                            <?php } ?>
                             <a href="/profile/delete_account" class="list-group-item list-group-item-action">Delete
                                 Account</a>
                         </div>
@@ -74,8 +72,8 @@
             </div>
         </div>
 
-        <?php include 'footer.php'; ?>
 
+        <?php include 'footer.php'; ?>
     </div>
     <script src="js/home.js"></script>
 </body>

@@ -7,13 +7,15 @@ require_once 'app/services/AuthenticationService.php';
 require_once 'app/models/UserRepository.php';
 require_once 'app/middlewares/AuthMiddleware.php';
 
-class AdminController {
+class AdminController
+{
     private $userRepository;
     private $authService;
     private $sessionManager;
     private $authMiddleware;
 
-    public function __construct(UserRepository $userRepository, AuthenticateService $authService, SessionManager $sessionManager, AuthMiddleware $authMiddleware) {
+    public function __construct(UserRepository $userRepository, AuthenticateService $authService, SessionManager $sessionManager, AuthMiddleware $authMiddleware)
+    {
         $this->userRepository = $userRepository;
         $this->authService = $authService;
         $this->sessionManager = $sessionManager;
@@ -21,22 +23,29 @@ class AdminController {
     }
 
 
-    public function index() {
+    public function index()
+    {
         $this->authMiddleware->checkAdmin();
-
+        $sessionManager = $this->sessionManager;
+        $userRepository = $this->userRepository;
+        $authService = $this->authService;
         $users = $this->userRepository->findAll();
-        require_once 'app/views/admin/view_user.php';
+        require_once 'app/views/view_user.php';
     }
 
-    public function editUser($id) {
+    public function editUser($id)
+    {
         $this->authMiddleware->checkAdmin();
-
+        $sessionManager = $this->sessionManager;
+        $userRepository = $this->userRepository;
+        $authService = $this->authService;
         $user = $this->userRepository->findById($id);
-        require_once "app/views/admin/edit_user.php";
+        require_once "app/views/edit_user.php";
     }
 
-    
-    public function updateUser($id, $data) {
+
+    public function updateUser($id, $data)
+    {
         $this->authMiddleware->checkAdmin();
 
         $user = $this->userRepository->findById($id);
@@ -54,7 +63,8 @@ class AdminController {
         exit;
     }
 
-    public function deleteUser($id) {
+    public function deleteUser($id)
+    {
         $this->authMiddleware->checkAdmin();
 
         $user = $this->userRepository->findById($id);

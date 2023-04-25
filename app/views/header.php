@@ -1,6 +1,6 @@
 <!-- Header -->
 <div class="row cus_header">
-    <div class="col-md-2 text-md-left text-center text">
+    <div class="col-md-3 text-md-left text-center text">
         <!-- Side navbar for phone -->
         <div id="mySidenav" class="sidenav pt-5">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -31,11 +31,11 @@
             </div>
             <a href="/cart">Giỏ hàng</a>
             <hr>
-            <a href="#">Sản phẩm</a>
-            <a href="#">Giới thiệu</a>
-            <a href="#">Tin tức</a>
-            <a href="#">Thanh toán</a>
-            <a href="#">Liên hệ</a>
+            <a href="/">Sản phẩm</a>
+            <a href="/introduction">Giới thiệu</a>
+            <a href="/news">Tin tức</a>
+            <a href="/payment">Thanh toán</a>
+            <a href="/contact">Liên hệ</a>
         </div>
         <button class="btn sidebar d-md-none" onclick="openNav()" type="submit">
             <i class="fa fa-bars"></i>
@@ -47,7 +47,7 @@
         </a>
     </div>
     <!-- Search bar -->
-    <div class="col-md-6 search">
+    <div class="col-md-4 search">
         <form class="input-group">
             <input type="text" class="form-control" placeholder="Bạn muốn tìm gì?">
             <div class="input-group-append">
@@ -81,7 +81,7 @@
         </div>
     </div>
     <!-- Shopping cart -->
-    <div class="col-md-2 d-none d-sm-block" style="font-size:18px;">
+    <div class="col-md-3 d-none d-sm-block" style="font-size:18px;">
         <a href="/cart" id="shopcart_text">
             <i class="bi bi-cart3" style="font-size:20px;"></i>
             Giỏ hàng
@@ -89,7 +89,7 @@
     </div>
 </div>
 <!-- Task bar -->
-<div class="row cus_navbar">
+<div class="row cus_navbar justify-content-around">
     <div class="col-md-2 col-sm-3 d-none d-sm-block products">
         <a href="/list">
             <i class="fa fa-bars"></i>
