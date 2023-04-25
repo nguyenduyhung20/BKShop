@@ -71,7 +71,7 @@
                 </a>
             </div>
             <!-- Search bar -->
-            <div class="col-md-6 search">
+            <div class="col-md-6 search d-none d-sm-block">
                 <form class="input-group">
                     <input type="text" class="form-control" placeholder="Bạn muốn tìm gì?">
                     <div class="input-group-append">
@@ -116,7 +116,7 @@
         </div>
         <!-- Task bar -->
         <div class="row cus_navbar">
-            <div class="col-md-2 products">
+            <div class="col-md-2 products ">
                 <div class="dropdown">
                     <div class="dropbtn"><i class="fa fa-bars"></i> Sản phẩm</div>
                     <div class="dropdown-content">

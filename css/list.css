@@ -88,7 +88,7 @@
 .cus_navbar .products{
     border: 0.5px solid rgba(70, 70, 70, 0.844);
     border-radius: 5px;
-    margin-left: 55px;
+    margin-left: 0px;
     font-weight: 600;
 }
 
@@ -202,9 +202,6 @@ footer a{
 @media only screen and (max-width: 992px) {
     body{ 
         height: 1400px;
-    }
-    .cus_navbar .products{
-        margin-left: 20px;
     }
     .cus_navbar .intro, .cus_navbar .contact, .cus_navbar .payment, .cus_navbar .news{
         margin-left: 5px;

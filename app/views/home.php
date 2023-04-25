@@ -143,7 +143,7 @@
                 </a>
             </div>
         </div>
-        <div class="row main-content py-3">
+        <div class="row main-content py-3 ">
             <div class="col-md-2 col-sm-10 mx-3 my-3 list_product">
                 <ul>
                     <li><a href="#"><i class="bi bi-laptop"></i><span>Laptop</span></a><br></li>
@@ -155,14 +155,14 @@
                     <li><a href="#"><i class="bi bi-tv"></i><span>Màn hình</span></a><br></li>
                 </ul>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 my-3">
                 <img src="img/slideshow_1.png" alt="pst1" width="100%" height="300px">
                 <div class="row" style="margin-top:10px">
                     <img class="col-md-6" src="img/slideshow_15.png" alt="pst2" width="100%" height="145px">
                     <img class="col-md-6" src="img/slideshow_4.png" alt="pst3" width="100%" height="145px">
                 </div>
             </div>
-            <div class="col-md-3 text-center">
+            <div class="col-md-3 my-3 text-center">
                 <img src="img/solid4.png" alt="pst2" width="100%" height="25%">
                 <img src="img/solid5.png" alt="pst2" width="100%" height="25%" style="margin-top:10px">
                 <img src="img/slideshow_5.png" alt="pst2" width="100%" height="25%" style="margin-top:10px">
@@ -173,61 +173,61 @@
             <a style="float:right; text-decoration: none; color: white;" href="/list">Xem tất cả ></a>
         </div>
         <div class="d-flex flex-wrap justify-content-between">
-            <div class="product col-lg-4 col-md-5 col-sm-12">
+            <div class="product col-lg-3 col-md-5 col-sm-12">
                 <img src="img/hp1.jpg" alt="Product">
                 <p>HP AIO 22 dd2002d i5 1235U 21.5 inch (6K7G1PA)</p>
                 <p> Giá: 20.390.000Đ</p>
                 <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
             </div>
-            <div class="product col-lg-4 col-md-5 col-sm-12">
+            <div class="product col-lg-3 col-md-5 col-sm-12">
                 <img src="img/imac1.jpg" alt="Product">
                 <p>iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU (MGPK3SA/A) </p>
                 <p> Giá: 27.990.000Đ</p>
                 <a href="" class="btn btn-outline-primary">Đặt mua</a>
             </div>
-            <div class="product col-lg-4 col-md-5 col-sm-12">
+            <div class="product col-lg-3 col-md-5 col-sm-12">
                 <img src="img/hp1.jpg" alt="Product">
                 <p>HP AIO 22 dd2002d i5 1235U 21.5 inch (6K7G1PA)</p>
                 <p> Giá: 20.390.000Đ</p>
                 <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
             </div>
-            <div class="product col-lg-4 col-md-5 col-sm-12">
+            <div class="product col-lg-3 col-md-5 col-sm-12">
                 <img src="img/imac1.jpg" alt="Product">
                 <p>iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU (MGPK3SA/A) </p>
                 <p> Giá: 27.990.000Đ</p>
                 <a href="" class="btn btn-outline-primary">Đặt mua</a>
             </div>
-            <div class="product col-lg-4 col-md-5 col-sm-12">
+            <div class="product col-lg-3 col-md-5 col-sm-12">
                 <img src="img/hp1.jpg" alt="Product">
                 <p>HP AIO 22 dd2002d i5 1235U 21.5 inch (6K7G1PA)</p>
                 <p> Giá: 20.390.000Đ</p>
                 <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
             </div>
-            <div class="product col-lg-4 col-md-5 col-sm-12">
+            <div class="product col-lg-3 col-md-5 col-sm-12">
                 <img src="img/imac1.jpg" alt="Product">
                 <p>iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU (MGPK3SA/A) </p>
                 <p> Giá: 27.990.000Đ</p>
                 <a href="" class="btn btn-outline-primary">Đặt mua</a>
             </div>
-            <div class="product col-lg-4 col-md-5 col-sm-12">
+            <div class="product col-lg-3 col-md-5 col-sm-12">
                 <img src="img/hp1.jpg" alt="Product">
                 <p>HP AIO 22 dd2002d i5 1235U 21.5 inch (6K7G1PA)</p>
                 <p> Giá: 20.390.000Đ</p>
                 <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
             </div>
-            <div class="product col-lg-4 col-md-5 col-sm-12">
+            <div class="product col-lg-3 col-md-5 col-sm-12">
                 <img src="img/imac1.jpg" alt="Product">
                 <p>iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU (MGPK3SA/A) </p>
                 <p> Giá: 27.990.000Đ</p>
                 <a href="" class="btn btn-outline-primary">Đặt mua</a>
             </div>
-            <div class="product col-lg-4 col-md-5 col-sm-12">
+            <div class="product col-lg-3 col-md-5 col-sm-12">
                 <img src="img/hp1.jpg" alt="Product">
                 <p>HP AIO 22 dd2002d i5 1235U 21.5 inch (6K7G1PA)</p>
                 <p> Giá: 20.390.000Đ</p>
                 <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
             </div>
-            <div class="product col-lg-4 col-md-5 col-sm-12">
+            <div class="product col-lg-3 col-md-5 col-sm-12">
                 <img src="img/imac1.jpg" alt="Product">
                 <p>iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU (MGPK3SA/A) </p>
                 <p> Giá: 27.990.000Đ</p>
