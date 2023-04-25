@@ -172,7 +172,7 @@
             PC BÁN CHẠY NHẤT
             <a style="float:right; text-decoration: none; color: white;" href="/list">Xem tất cả ></a>
         </div>
-        <div class="d-flex flex-wrap justify-content-between">
+        <div class="d-flex flex-wrap justify-content-around">
             <div class="product col-lg-3 col-md-5 col-sm-12">
                 <img src="img/hp1.jpg" alt="Product">
                 <p>HP AIO 22 dd2002d i5 1235U 21.5 inch (6K7G1PA)</p>
