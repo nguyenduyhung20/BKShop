@@ -1,6 +1,6 @@
 <!-- Header -->
 <div class="row cus_header">
-    <div class="col-md-2 text-md-left text-center text">
+    <div class="col-md-3 text-md-left text-center text">
         <!-- Side navbar for phone -->
         <div id="mySidenav" class="sidenav pt-5">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -47,7 +47,7 @@
         </a>
     </div>
     <!-- Search bar -->
-    <div class="col-md-6 search">
+    <div class="col-md-4 search">
         <form class="input-group">
             <input type="text" class="form-control" placeholder="Bạn muốn tìm gì?">
             <div class="input-group-append">
@@ -81,7 +81,7 @@
         </div>
     </div>
     <!-- Shopping cart -->
-    <div class="col-md-2 d-none d-sm-block" style="font-size:18px;">
+    <div class="col-md-3 d-none d-sm-block" style="font-size:18px;">
         <a href="/cart" id="shopcart_text">
             <i class="bi bi-cart3" style="font-size:20px;"></i>
             Giỏ hàng
