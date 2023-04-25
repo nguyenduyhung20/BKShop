@@ -115,7 +115,7 @@
             </div>
         </div>
         <!-- Task bar -->
-        <div class="row cus_navbar px-2">
+        <div class="row cus_navbar">
             <div class="col-md-2 col-sm-3 d-none d-sm-block products">
                 <a href="/">
                     <i class="fa fa-bars"></i>
