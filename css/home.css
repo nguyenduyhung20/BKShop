@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
 
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+
 /* Header */
 .cus_header{
     height: 60px;	
@@ -47,7 +53,7 @@
 .cus_header form{
     padding: auto 0;
     margin: 10px 0;
-    width: 75%;
+    width: 100%;
 }
 .cus_header form input{
 	background: white;
@@ -68,11 +74,14 @@
 
 /* Navbar */
 .cus_navbar{
-    height: 30px;
-    line-height: 30px;
+    height: 2rem;
+    line-height: 2rem;
     margin-top: 10px;
     font-size: 16px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
 .cus_navbar a{
     color: #000000;
@@ -106,12 +115,11 @@
 /* List kinds of product */
 .main-content .list_product{
     background-color: rgb(233, 242, 242);
-    margin: 10px 0 0 55px;
     border-radius: 5px;
 }
 .main-content .list_product ul{
     list-style: none;
-    padding-left: 15px;
+    padding-left: 0.1rem;
     margin-top: 5px;
 }
 .main-content .list_product ul li{
@@ -177,9 +185,7 @@ footer a{
 } 
 
 @media only screen and (max-width: 992px) {
-    body{ 
-        height: 1400px;
-    }
+
     .cus_navbar .products{
         margin-left: 20px;
     }

@@ -24,7 +24,7 @@
     <div class="container-fluid">
         <!-- Header -->
         <div class="row cus_header">
-            <div class="col-md-2 text-md-left text-center text">
+            <div class="col-md-3 text-md-left text-center text">
                 <!-- Side navbar for phone -->
                 <div id="mySidenav" class="sidenav pt-5">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -55,7 +55,7 @@
                     </div>
                     <a href="/cart">Giỏ hàng</a>
                     <hr>
-                    <a href="#">Danh mục sản phẩm</a>
+                    <a href="#">Sản phẩm</a>
                     <a href="#">Giới thiệu</a>
                     <a href="#">Tin tức</a>
                     <a href="#">Thanh toán</a>
@@ -71,7 +71,7 @@
                 </a>
             </div>
             <!-- Search bar -->
-            <div class="col-md-6 search">
+            <div class="col-md-4 search">
                 <form class="input-group">
                     <input type="text" class="form-control" placeholder="Bạn muốn tìm gì?">
                     <div class="input-group-append">
@@ -107,7 +107,7 @@
                 </div>
             </div>
             <!-- Shopping cart -->
-            <div class="col-md-2 d-none d-sm-block" style="font-size:18px;">
+            <div class="col-md-3 d-none d-sm-block" style="font-size:18px;">
                 <a href="/cart" id="shopcart_text">
                     <i class="bi bi-cart3" style="font-size:20px;"></i>
                     Giỏ hàng
@@ -115,11 +115,11 @@
             </div>
         </div>
         <!-- Task bar -->
-        <div class="row cus_navbar">
+        <div class="row cus_navbar px-2">
             <div class="col-md-2 col-sm-3 d-none d-sm-block products">
                 <a href="">
                     <i class="fa fa-bars"></i>
-                    Danh mục sản phẩm
+                    Sản phẩm
                 </a>
             </div>
             <div class="col-md-2 col-sm-2 d-none d-sm-block intro">
@@ -143,8 +143,8 @@
                 </a>
             </div>
         </div>
-        <div class="row main-content">
-            <div class="col-md-2 list_product">
+        <div class="row main-content py-3">
+            <div class="col-md-2 col-sm-10 mx-3 my-3 list_product">
                 <ul>
                     <li><a href="#"><i class="bi bi-laptop"></i><span>Laptop</span></a><br></li>
                     <li><a href="/list"><i class="bi bi-pc-display"></i><span>PC</span></a><br></li>
@@ -155,79 +155,79 @@
                     <li><a href="#"><i class="bi bi-tv"></i><span>Màn hình</span></a><br></li>
                 </ul>
             </div>
-            <div class="col-md-6" style="margin-top: 10px">
+            <div class="col-md-6">
                 <img src="img/slideshow_1.png" alt="pst1" width="100%" height="300px">
                 <div class="row" style="margin-top:10px">
                     <img class="col-md-6" src="img/slideshow_15.png" alt="pst2" width="100%" height="145px">
-                    <img class="col-md-6" src="img/slideshow_4.png" alt="pst3" width="270px" height="145px">
+                    <img class="col-md-6" src="img/slideshow_4.png" alt="pst3" width="100%" height="145px">
                 </div>
             </div>
-            <div class="col-md-3" style="margin-top: 10px">
-                <img src="img/solid4.png" alt="pst2" width="270px" height="145px">
-                <img src="img/solid5.png" alt="pst2" width="270px" height="145px" style="margin-top:10px">
-                <img src="img/slideshow_5.png" alt="pst2" width="270px" height="145px" style="margin-top:10px">
+            <div class="col-md-3 text-center">
+                <img src="img/solid4.png" alt="pst2" width="100%" height="25%">
+                <img src="img/solid5.png" alt="pst2" width="100%" height="25%" style="margin-top:10px">
+                <img src="img/slideshow_5.png" alt="pst2" width="100%" height="25%" style="margin-top:10px">
             </div>
         </div>
         <div class="pc_top">
             PC BÁN CHẠY NHẤT
             <a style="float:right; text-decoration: none; color: white;" href="/list">Xem tất cả ></a>
         </div>
-        <div class="d-flex flex-wrap justify-content-between mx-2">
-            <div class="product col-md-2">
+        <div class="d-flex flex-wrap justify-content-between">
+            <div class="product col-lg-4 col-md-5 col-sm-12">
                 <img src="img/hp1.jpg" alt="Product">
                 <p>HP AIO 22 dd2002d i5 1235U 21.5 inch (6K7G1PA)</p>
                 <p> Giá: 20.390.000Đ</p>
                 <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
             </div>
-            <div class="product col-md-2">
+            <div class="product col-lg-4 col-md-5 col-sm-12">
                 <img src="img/imac1.jpg" alt="Product">
                 <p>iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU (MGPK3SA/A) </p>
                 <p> Giá: 27.990.000Đ</p>
                 <a href="" class="btn btn-outline-primary">Đặt mua</a>
             </div>
-            <div class="product col-md-2">
+            <div class="product col-lg-4 col-md-5 col-sm-12">
                 <img src="img/hp1.jpg" alt="Product">
                 <p>HP AIO 22 dd2002d i5 1235U 21.5 inch (6K7G1PA)</p>
                 <p> Giá: 20.390.000Đ</p>
                 <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
             </div>
-            <div class="product col-md-2">
+            <div class="product col-lg-4 col-md-5 col-sm-12">
                 <img src="img/imac1.jpg" alt="Product">
                 <p>iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU (MGPK3SA/A) </p>
                 <p> Giá: 27.990.000Đ</p>
                 <a href="" class="btn btn-outline-primary">Đặt mua</a>
             </div>
-            <div class="product col-md-2">
+            <div class="product col-lg-4 col-md-5 col-sm-12">
                 <img src="img/hp1.jpg" alt="Product">
                 <p>HP AIO 22 dd2002d i5 1235U 21.5 inch (6K7G1PA)</p>
                 <p> Giá: 20.390.000Đ</p>
                 <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
             </div>
-            <div class="product col-md-2">
+            <div class="product col-lg-4 col-md-5 col-sm-12">
                 <img src="img/imac1.jpg" alt="Product">
                 <p>iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU (MGPK3SA/A) </p>
                 <p> Giá: 27.990.000Đ</p>
                 <a href="" class="btn btn-outline-primary">Đặt mua</a>
             </div>
-            <div class="product col-md-2">
+            <div class="product col-lg-4 col-md-5 col-sm-12">
                 <img src="img/hp1.jpg" alt="Product">
                 <p>HP AIO 22 dd2002d i5 1235U 21.5 inch (6K7G1PA)</p>
                 <p> Giá: 20.390.000Đ</p>
                 <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
             </div>
-            <div class="product col-md-2">
+            <div class="product col-lg-4 col-md-5 col-sm-12">
                 <img src="img/imac1.jpg" alt="Product">
                 <p>iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU (MGPK3SA/A) </p>
                 <p> Giá: 27.990.000Đ</p>
                 <a href="" class="btn btn-outline-primary">Đặt mua</a>
             </div>
-            <div class="product col-md-2">
+            <div class="product col-lg-4 col-md-5 col-sm-12">
                 <img src="img/hp1.jpg" alt="Product">
                 <p>HP AIO 22 dd2002d i5 1235U 21.5 inch (6K7G1PA)</p>
                 <p> Giá: 20.390.000Đ</p>
                 <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
             </div>
-            <div class="product col-md-2">
+            <div class="product col-lg-4 col-md-5 col-sm-12">
                 <img src="img/imac1.jpg" alt="Product">
                 <p>iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU (MGPK3SA/A) </p>
                 <p> Giá: 27.990.000Đ</p>

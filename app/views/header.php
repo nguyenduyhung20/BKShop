@@ -31,7 +31,7 @@
             </div>
             <a href="/cart">Giỏ hàng</a>
             <hr>
-            <a href="#">Danh mục sản phẩm</a>
+            <a href="#">Sản phẩm</a>
             <a href="#">Giới thiệu</a>
             <a href="#">Tin tức</a>
             <a href="#">Thanh toán</a>
@@ -93,7 +93,7 @@
     <div class="col-md-2 col-sm-3 d-none d-sm-block products">
         <a href="/list">
             <i class="fa fa-bars"></i>
-            Danh mục sản phẩm
+            Sản phẩm
         </a>
     </div>
     <div class="col-md-2 col-sm-2 d-none d-sm-block intro">

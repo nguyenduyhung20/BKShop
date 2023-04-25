@@ -56,7 +56,7 @@
                     </div>
                     <a href="/cart">Giỏ hàng</a>
                     <hr>
-                    <a href="">Danh mục sản phẩm</a>
+                    <a href="">Sản phẩm</a>
                     <a href="/introduction">Giới thiệu</a>
                     <a href="#">Tin tức</a>
                     <a href="/payment">Thanh toán</a>
@@ -118,7 +118,7 @@
         <div class="row cus_navbar">
             <div class="col-md-2 products">
                 <div class="dropdown">
-                    <div class="dropbtn"><i class="fa fa-bars"></i> Danh mục sản phẩm</div>
+                    <div class="dropbtn"><i class="fa fa-bars"></i> Sản phẩm</div>
                     <div class="dropdown-content">
                         <ul>
                             <li><a href="#"><i class="bi bi-laptop"></i><span>Laptop</span></a><br></li>

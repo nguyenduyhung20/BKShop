@@ -25,7 +25,7 @@
     <div class="container-fluid">
         <!-- Header -->
         <div class="row cus_header">
-            <div class="col-md-2 text-md-left text-center text">
+            <div class="col-md-3 text-md-left text-center text">
                 <!-- Side navbar for phone -->
                 <div id="mySidenav" class="sidenav pt-5">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -56,7 +56,7 @@
                     </div>
                     <a href="#">Giỏ hàng</a>
                     <hr>
-                    <a href="#">Danh mục sản phẩm</a>
+                    <a href="#">Sản phẩm</a>
                     <a href="#">Giới thiệu</a>
                     <a href="#">Tin tức</a>
                     <a href="#">Thanh toán</a>
@@ -72,7 +72,7 @@
                 </a>
             </div>
             <!-- Search bar -->
-            <div class="col-md-6 search">
+            <div class="col-md-4 search">
                 <form class="input-group">
                     <input type="text" class="form-control" placeholder="Bạn muốn tìm gì?">
                     <div class="input-group-append">
@@ -108,7 +108,7 @@
                 </div>
             </div>
             <!-- Shopping cart -->
-            <div class="col-md-2 d-none d-sm-block" style="font-size:18px;">
+            <div class="col-md-3 d-none d-sm-block" style="font-size:18px;">
                 <a href="/cart" id="shopcart_text">
                     <i class="bi bi-cart3" style="font-size:20px;"></i>
                     Giỏ hàng
@@ -118,7 +118,7 @@
         <!-- Task bar -->
         <div class="row cus_navbar">
             <div class="col-md-2 products dropdown">
-                <div class="dropbtn"><i class="fa fa-bars"></i> Danh mục sản phẩm</div>
+                <div class="dropbtn"><i class="fa fa-bars"></i> Sản phẩm</div>
                 <div class="dropdown-content">
                     <ul>
                         <li><a href="#"><i class="bi bi-laptop"></i><span>Laptop</span></a><br></li>

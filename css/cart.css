@@ -1,4 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
+
+html, body {
+    height: 100%;
+}
+
+.container-fluid {
+display: flex;
+flex-direction: column;
+min-height: 100%;
+}
+.main-content {
+flex: 1;
+}
+
+
 /* Header */
 .cus_header{
     height: 60px;	
@@ -236,9 +251,6 @@ footer a{
 } 
 
 @media only screen and (max-width: 992px) {
-    body{ 
-        height: 1400px;
-    }
     .cus_navbar .products{
         margin-left: 20px;
     }
