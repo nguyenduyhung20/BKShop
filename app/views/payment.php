@@ -58,9 +58,9 @@
                     <hr>
                     <a href="/">Sản phẩm</a>
                     <a href="/introduction">Giới thiệu</a>
-                    <a href="#">Tin tức</a>
+                    <a href="/news">Tin tức</a>
                     <a href="/payment">Thanh toán</a>
-                    <a href="#">Liên hệ</a>
+                    <a href="/contact">Liên hệ</a>
                 </div>
                 <button class="btn sidebar d-md-none" onclick="openNav()" type="submit">
                     <i class="fa fa-bars"></i>

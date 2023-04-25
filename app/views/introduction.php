@@ -54,13 +54,13 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                    <a href="#">Giỏ hàng</a>
+                    <a href="/cart">Giỏ hàng</a>
                     <hr>
-                    <a href="#">Sản phẩm</a>
-                    <a href="#">Giới thiệu</a>
-                    <a href="#">Tin tức</a>
-                    <a href="#">Thanh toán</a>
-                    <a href="#">Liên hệ</a>
+                    <a href="/">Sản phẩm</a>
+                    <a href="/introduction">Giới thiệu</a>
+                    <a href="/news">Tin tức</a>
+                    <a href="/payment">Thanh toán</a>
+                    <a href="/contact">Liên hệ</a>
                 </div>
                 <button class="btn sidebar d-md-none" onclick="openNav()" type="submit">
                     <i class="fa fa-bars"></i>
@@ -72,7 +72,7 @@
                 </a>
             </div>
             <!-- Search bar -->
-            <div class="col-md-4 search">
+            <div class="col-md-4 d-none d-sm-block search">
                 <form class="input-group">
                     <input type="text" class="form-control" placeholder="Bạn muốn tìm gì?">
                     <div class="input-group-append">
