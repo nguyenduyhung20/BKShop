@@ -23,7 +23,7 @@ body {
     padding-bottom: 20px;
 }
 
-.sidenav {
+.sidetask {
     height: 100%;
     width: 250px;
     position: fixed;
@@ -37,7 +37,7 @@ body {
     border-right: 1px solid #dee2e6;
 }
 
-.sidenav a {
+.sidetask a {
     padding: 8px 16px 8px 16px;
     text-decoration: none;
     font-size: 18px;
@@ -45,7 +45,7 @@ body {
     display: block;
 }
 
-.sidenav a:hover {
+.sidetask a:hover {
     color: #007bff;
 }
 
@@ -84,7 +84,7 @@ body {
 }
 
 @media screen and (max-width: 991px) {
-    .sidenav {
+    .sidetask {
         width: 100%;
         height: auto;
         position: relative;
@@ -95,7 +95,7 @@ body {
         flex-wrap: wrap;
     }
 
-    .sidenav a {
+    .sidetask a {
         float: left;
         width: auto;
         padding: 10px;
