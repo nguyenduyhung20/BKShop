@@ -89,7 +89,7 @@
     </div>
 </div>
 <!-- Task bar -->
-<div class="row cus_navbar">
+<div class="row cus_navbar justify-content-around">
     <div class="col-md-2 col-sm-3 d-none d-sm-block products">
         <a href="/list">
             <i class="fa fa-bars"></i>

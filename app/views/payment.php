@@ -34,7 +34,7 @@
             </ol>
         </nav>
         <div class="row justify-content-between mx-2 my-4 pb-3">
-            <div class="col-md-4 col-12 mb-4">
+            <div class="col-12 mb-4">
                 <h4 class="py-3">Thông tin nhận hàng</h4>
                 <form action="" method="GET">
                     <div class="form-group">
@@ -55,7 +55,7 @@
                     </div>
                 </form>
             </div>
-            <div class="col-md-4 col-12 mb-4">
+            <div class="col-12 mb-4">
                 <div class="card mb-4">
                     <div class="card-header font-weight-bold">
                         <i class="fa fa-truck"></i> Phương thức vận chuyển
@@ -109,7 +109,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-12 mb-4">
+            <div class="col-12 mb-4">
                 <div class="card">
                     <div class="card-header font-weight-bold">
                         <h4 class="py-2">Chi tiết đơn hàng</h4>
@@ -190,7 +190,7 @@
             </div>
         </div>
     </footer>
-    <script src="js/detail.js"></script>
+    <script src="js/home.js"></script>
 </body>
 
 </html>
