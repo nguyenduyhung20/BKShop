@@ -4,13 +4,29 @@
         <!-- Side navbar for phone -->
         <div id="mySidenav" class="sidenav pt-5">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="dropdown">
-                <a class="dropdown-toggle" role="button" data-toggle="dropdown" id="user_text" aria-expanded="false">
-                    Tài khoản
-                </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="/login">Đăng nhập</a>
-                    <a class="dropdown-item" href="/sigin">Đăng ký</a>
+            <div class="d-flex align-items-center px-3">
+                <i class="bi bi-person-circle" style="font-size:20px;"></i>
+                <div class="dropdown">
+
+                    <?php if ($authService->isLoggedIn()): ?>
+                        <a class="dropdown-toggle" role="button" data-toggle="dropdown" id="user_text"
+                            aria-expanded="false">
+                            <?php echo $authService->getLoggedInUser()->getUsername(); ?>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/profile">Profile</a>
+                            <a class="dropdown-item" href="/logout">Logout</a>
+                        </div>
+                    <?php else: ?>
+                        <a class="dropdown-toggle" role="button" data-toggle="dropdown" id="user_text"
+                            aria-expanded="false">
+                            Tài khoản
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/login">Đăng nhập</a>
+                            <a class="dropdown-item" href="/register">Đăng ký</a>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
             <a href="/cart">Giỏ hàng</a>
@@ -25,7 +41,7 @@
             <i class="fa fa-bars"></i>
         </button>
         <!-- Logo of web page -->
-        <a href="" class="px-2">
+        <a href="/" class="px-2">
             <img src="/img/Logo.png" alt="logo" width="30" height="30" class="d-inline-block align-text-top">
             BKShop
         </a>
@@ -45,13 +61,23 @@
     <div class="col-md-2 d-none d-sm-block" style="font-size:18px;">
         <div class="dropdown">
             <i class="bi bi-person-circle" style="font-size:20px;"></i>
-            <a class="dropdown-toggle" role="button" data-toggle="dropdown" id="user_text" aria-expanded="false">
-                Tài khoản
-            </a>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="/login">Đăng nhập</a>
-                <a class="dropdown-item" href="/register">Đăng ký</a>
-            </div>
+            <?php if ($authService->isLoggedIn()): ?>
+                <a class="dropdown-toggle" role="button" data-toggle="dropdown" id="user_text" aria-expanded="false">
+                    <?php echo $authService->getLoggedInUser()->getUsername(); ?>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/profile">Profile</a>
+                    <a class="dropdown-item" href="/logout">Logout</a>
+                </div>
+            <?php else: ?>
+                <a class="dropdown-toggle" role="button" data-toggle="dropdown" id="user_text" aria-expanded="false">
+                    Tài khoản
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/login">Đăng nhập</a>
+                    <a class="dropdown-item" href="/register">Đăng ký</a>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
     <!-- Shopping cart -->
@@ -65,7 +91,7 @@
 <!-- Task bar -->
 <div class="row cus_navbar">
     <div class="col-md-2 col-sm-3 d-none d-sm-block products">
-        <a href="">
+        <a href="/list">
             <i class="fa fa-bars"></i>
             Danh mục sản phẩm
         </a>

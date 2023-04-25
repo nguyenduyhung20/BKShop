@@ -88,6 +88,9 @@ class UserController
             header('Location: /');
             exit;
         }
+        $sessionManager = $this->sessionManager;
+        $userRepository = $this->userRepository;
+        $authService = $this->authService;
         $user = $loggedInUser;
         require_once 'app/views/profile.php';
     }
@@ -165,7 +168,8 @@ class UserController
         exit;
     }
 
-    public function deleteAccount() {
+    public function deleteAccount()
+    {
         $loggedInUser = $this->authService->getLoggedInUser();
 
         if (!$loggedInUser) {
