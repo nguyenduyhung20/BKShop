@@ -40,8 +40,10 @@
                                 Info</a>
                             <a href="/profile/change_password" class="list-group-item list-group-item-action">Change
                                 Password</a>
-                            <a href="/profile/site_settings" class="list-group-item list-group-item-action">Site
-                                Settings</a>
+                            <!-- <a href="/profile/site_settings" class="list-group-item list-group-item-action">Site
+                                Settings</a> -->
+                            <a href="/profile/delete_account" class="list-group-item list-group-item-action">Delete
+                                Account</a>
                         </div>
                     </div>
                     <div class="col-md-9 py-4">
@@ -54,8 +56,11 @@
                             case 'change_password':
                                 require_once 'change_password.php';
                                 break;
-                            case 'site_settings':
-                                require_once 'site_settings.php';
+                            // case 'site_settings':
+                            //     require_once 'site_settings.php';
+                            //     break;
+                            case 'delete_account':
+                                require_once 'delete_account.php';
                                 break;
                             default: // Show the Current User view by default
                                 require_once 'user_info.php';

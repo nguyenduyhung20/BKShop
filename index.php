@@ -75,6 +75,14 @@ if (isset($_GET['action'])) {
     } elseif ($_SERVER['REQUEST_METHOD'] == 'POST' && $_GET['action'] == 'change_password_handler') {
         $userController->change_password_handler();
         exit;
+    } elseif ($_GET['action'] == 'delete_account') {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $userController->deleteAccount();
+        } else {
+            $userController->profile();
+            exit;
+        }
+
     }
 } else {
     // Redirect to the homepage

@@ -164,5 +164,33 @@ class UserController
         header('Location: /profile/change_password');
         exit;
     }
+
+    public function deleteAccount() {
+        $loggedInUser = $this->authService->getLoggedInUser();
+
+        if (!$loggedInUser) {
+            // User is not logged in, redirect to login page
+            header('Location: /login');
+            exit;
+        }
+
+        // Get form data
+        $password = $_POST['password'] ?? '';
+
+        if (!password_verify($password, $loggedInUser->getPassword())) {
+            // Password is incorrect, redirect back to profile page with error message
+            $this->sessionManager->set('error', 'Incorrect password, please try again.');
+            header('Location: /profile/delete_account');
+            exit;
+        }
+
+        // Delete the user's account
+        $this->userRepository->deleteUser($loggedInUser);
+
+        // Log the user out and redirect to the homepage
+        $this->authService->logout();
+        header('Location: /');
+        exit;
+    }
 }
 ?>
