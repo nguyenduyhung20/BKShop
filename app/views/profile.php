@@ -37,6 +37,9 @@
                                 Password</a>
                             <!-- <a href="/profile/site_settings" class="list-group-item list-group-item-action">Site
                                 Settings</a> -->
+                            <?php if ($authService->getLoggedInUser()->getRole() == 'ADMIN') { ?>
+                                <a href="/admin" class="list-group-item list-group-item-action">View Users</a>
+                            <?php } ?>
                             <a href="/profile/delete_account" class="list-group-item list-group-item-action">Delete
                                 Account</a>
                         </div>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 final class SessionManager
 {
     public function __construct()
@@ -73,7 +73,7 @@ final class SessionManager
      */
     public function isLoggedIn(): bool
     {
-        return $this->get('user_id') !== null;
+        return $this->get('user') !== null;
     }
 
     /**
