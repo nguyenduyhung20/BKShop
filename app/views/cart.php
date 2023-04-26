@@ -158,6 +158,34 @@
         </div>
 
         <div class="table-responsive">
+            <?php
+                if(isset($_SESSION['cart'])){
+                if(isset($_POST['sl'])){
+                foreach ($_POST['sl'] as $id_product => $sl) {
+                //Nếu số lượng nhập vào là 0 thì unset sản phẩm đó
+                    if($sl==0){
+                        unset($_SESSION['cart'][$id_product]);
+                    }else{
+                //Nếu số khác 0 thì gán ngược lại.
+                        $_SESSION['cart'][$id_product] = $sl;
+                    }
+                }
+            }
+            
+            $arrId = array();
+            //Lấy ra id sản phẩm từ mảng session
+            foreach ($_SESSION['cart'] as $id_product => $sl) {
+                $arrId[] = $id_product;
+            }
+            //Tách mảng arrId thành 1 chuỗi và ngăn cách bởi dấu ,
+            $strID = implode(',', $arrId);
+            if(isset($sl)){
+            $link = mysqli_connect("localhost","root","","bkshop");
+            $sql = "SELECT * FROM product WHERE id_product IN ($strID)";
+            $query = mysqli_query($link, $sql);
+            $totalPriceAll = 0;
+           
+        ?>
             <table class="table table-striped mx-auto my-3">
                 <thread>
                     <tr class="table-success">
@@ -169,50 +197,48 @@
                     </tr>
                 </thread>
                 <tbody>
+                     <?php
+                        while($row = mysqli_fetch_assoc($query)){
+                        $totalPrice = $_SESSION['cart'][$row['id_product']]*$row['price_product'];
+                    ?>
                     <tr>
                         <td>
-                            <img src="img/hp1.jpg" alt="main_pic" width="10%" height="10%">
-                            HP AIO 22 dd2002d i5 1235U 21.5 inch (6K7G1PA)
+                            <img src="img/<?php echo $row['image_product'] ?>" alt="main_pic" width="10%" height="10%">
+                            <?php echo $row['name_product'] ?>
                         </td>
-                        <td>20.390.000Đ</td>
+                        <td><?php echo $row['price_product'] ?>Đ</td>
                         <td class="col-1">
-                            <form action="" method="GET">
-                                <input tpye="text" class="form-control">
+                            <form action="" method="POST">
+                                <input class="form-control" type="text" name="sl[<?php echo $row['id_product'] ?>]" value="<?php echo $_SESSION['cart'][$row['id_product']]?>" />
                             </form>
                         </td>
-                        <td>20.390.000Đ</td>
+                        <td><?php echo $row['price_product'] ?>Đ</td>
                         <td>
                             <button type="button" class="btn btn-outline-danger">
-                                <i class="bi bi-trash text-danger"></i>
+                                <a href="app/views/delete_cart.php?id_product=<?php echo $row['id_product'] ?>"><i class="bi bi-trash text-danger"></i></a>
                             </button>
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <img src="img/imac1.jpg" alt="Product" width="10%" height="10%">
-                            iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU (MGPK3SA/A)
-                        </td>
-                        <td>27.990.000Đ</td>
-                        <td class="col-1">
-                            <form action="" method="GET">
-                                <input tpye="text" class="form-control">
-                            </form>
-                        </td>
-                        <td>27.990.000Đ</td>
-                        <td>
-                            <button type="button" class="btn btn-outline-danger">
-                                <i class="bi bi-trash text-danger"></i>
-                            </button>
-                        </td>
-                    </tr>
+                    <?php
+                        $totalPriceAll+=$totalPrice;
+                        }
+                    ?>
                     <tr>
                         <td class="text-right table-info" colspan="5">
                             Tổng tiền:
-                            <span style="color: rgb(17, 17, 136); font-weight:600;">48.380.000Đ</span>
+                            <span style="color: rgb(17, 17, 136); font-weight:600;"><?php echo $totalPriceAll ?>Đ</span>
                         </td>
                     </tr>
                 </tbody>
             </table>
+            <?php
+                }else{
+                    echo 'Giỏ hàng rỗng';
+                }
+                }else{
+            echo 'Giỏ hàng rỗng';
+        }
+            ?>
         </div>
 
         <div class="d-flex justify-content-between my-5">

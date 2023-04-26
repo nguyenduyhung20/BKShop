@@ -43,7 +43,7 @@
                 <div class="input-field">
                     <img src="img/pass.png" alt="">
                     <input type="password" name="password" id="password" placeholder="Enter password" required />
-                </div>
+                </div> 
                 <div class="input-field button">
                     <button type="submit" name="login" value="Login">Login</button>
                 </div>

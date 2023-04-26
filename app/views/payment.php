@@ -117,37 +117,44 @@
                     <div class="card-body">
                         <table class="table">
                             <tbody>
+                                <?php
+                                    $link = mysqli_connect("localhost","root","","bkshop");
+                                    $arrId = array();
+                                    //Lấy ra id sản phẩm từ mảng session
+                                    foreach ($_SESSION['cart'] as $id_product => $sl) {
+                                        $arrId[] = $id_product;
+                                    }
+                                    //Tách mảng arrId thành 1 chuỗi và ngăn cách bởi dấu ,
+                                    $strID = implode(',', $arrId);
+                                    $sql = "SELECT * FROM product WHERE id_product IN ($strID)";
+                                    $query = mysqli_query($link, $sql);
+                                    $totalPriceAll = 0;
+                                    while($row = mysqli_fetch_assoc($query)){
+                                    $totalPrice = $_SESSION['cart'][$row['id_product']]*$row['price_product'];
+                                ?>
                                 <tr>
                                     <td>
-                                        HP AIO 22 dd2002d i5 1235U 21.5 inch (6K7G1PA)<br>
+                                        <?php echo $row['name_product'] ?><br>
                                         <span style="color:#999999;">
-                                            Giá bán: 20.390.000Đ<br>
-                                            Số lượng: 1
+                                            Giá bán: <?php echo $row['price_product'] ?>Đ<br>
+                                            Số lượng: <?php echo $_SESSION['cart'][$row['id_product']] ?>
                                         </span>
                                     </td>
-                                    <td>20.390.000Đ</td>
+                                <?php 
+                                    $totalPriceAll+=$totalPrice;
+                                    }
+                                ?>
+                                    <td><?php echo $totalPrice ?>Đ</td>
                                 </tr>
-                                <tr>
                                     <td>
-                                        iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU (MGPK3SA/A)<br>
-                                        <span style="color:#999999;">
-                                            Giá bán: 27.990.000Đ<br>
-                                            Số lượng: 1
-                                        </span>
-                                    </td>
-                                    <td>27.990.000Đ</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Tạm tính:<br>
-                                        Phí vận chuyển:<br>
-                                        Tổng tiền:
+                                        Tạm tính: <?php echo $totalPrice ?><br>
+                                        Tổng tiền: <?php echo $totalPrice ?>
                                     </td>
                                     <td>
-                                        <span style="color: rgb(17, 17, 136);">48.380.000Đ</span><br>
+                                        <span style="color: rgb(17, 17, 136);"><?php echo $totalPrice ?>Đ</span><br>
                                         Miễn phí<br>
                                         <span
-                                            style="color: rgb(17, 17, 136); font-size:20px; font-weight:bold;">48.380.000Đ</span>
+                                            style="color: rgb(17, 17, 136); font-size:20px; font-weight:bold;"><?php echo $totalPrice ?>Đ</span>
                                     </td>
                                 </tr>
                             </tbody>

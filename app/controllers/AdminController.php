@@ -22,6 +22,15 @@ class AdminController
         $this->authMiddleware = $authMiddleware;
     }
 
+    public function index_pro()
+    {
+        $this->authMiddleware->checkAdmin();
+        $sessionManager = $this->sessionManager;
+        $userRepository = $this->userRepository;
+        $authService = $this->authService;
+        $users = $this->userRepository->findAll();
+        require_once 'app/views/view_product.php';
+    }
 
     public function index()
     {
