@@ -38,7 +38,8 @@
 								Settings</a> -->
 							<?php if ($authService->getLoggedInUser()->getRole() == 'ADMIN') { ?>
 								<a href="/admin" class="list-group-item list-group-item-action">View Users</a>
-								<a href="index.php?action=view_product" class="list-group-item list-group-item-action">View Products</a>
+								<a href="index.php?action=view_product" class="list-group-item list-group-item-action">View
+									Products</a>
 							<?php } ?>
 							<a href="/profile/delete_account" class="list-group-item list-group-item-action">Delete
 								Account</a>
@@ -51,38 +52,63 @@
 								<h3>Edit Products</h3>
 							</div>
 							<div class="card-body">
-									<form method="post" enctype="multipart/form-data">
-										<table id="add-prd" border="0" cellpadding="0" cellspacing="0">
-									    	<tr>
-									        	<td><label>Tên sản phẩm</label><br /><input type="text" name="name_product" /><?php if(isset($error_name_product)){echo $error_name_product;}?></td>
-									        </tr>
-									        <tr>
-									        	<td><label>Ảnh mô tả</label><br /><input type="file" name="image_product" /><?php if(isset($error_image_product)){echo $error_image_product;}?></td>
-									        </tr>
-									        <tr>
-									        	<td><label>Nhà cung cấp</label><br />
-									            	<select name="id_list">
-									                	<option value="unselect" selected="selected">Lựa chọn nhà cung cấp</option>
-									                    <option value=1>HP</option>
-									                    <option value=2>Apple</option>
-									                </select>
-									                <?php if(isset($error_id_list)){echo $error_id_list;}?>
-									            </td>
-									        </tr>
-									        <tr>
-									        	<td><label>Giá sản phẩm</label><br /><input type="text" name="price_product" /> VNĐ <?php if(isset($error_price_product)){echo $error_price_product;}?></td>
-									        </tr>
-									        <tr>
-									        	<td><label>Sản phẩm đặc biệt</label><br />Có <input type="radio" name="special" value=1 /> Không <input checked="checked" type="radio" name="special" value=0 /></td>
-									        </tr>
-									        <tr>
-									        	<td><label>Thông tin chi tiết sản phẩm</label><br /><textarea cols="60" rows="12" name="description_product"></textarea><?php if(isset($error_description_product)){echo $error_description_product;}?></td>
-									        </tr>
-									        <tr>
-									        	<td><input type="submit" name="submit" value="Thêm mới" /> <input type="reset" name="reset" value="Làm mới" /></td>
-									        </tr>
-									    </table>
-    								</form>
+								<form method="post" enctype="multipart/form-data">
+									<table id="add-prd" border="0" cellpadding="0" cellspacing="0">
+										<tr>
+											<td><label>Tên sản phẩm</label><br /><input type="text"
+													name="name_product" />
+												<?php if (isset($error_name_product)) {
+													echo $error_name_product;
+												} ?>
+											</td>
+										</tr>
+										<tr>
+											<td><label>Ảnh mô tả</label><br /><input type="file" name="image_product" />
+												<?php if (isset($error_image_product)) {
+													echo $error_image_product;
+												} ?>
+											</td>
+										</tr>
+										<tr>
+											<td><label>Nhà cung cấp</label><br />
+												<select name="id_list">
+													<option value="unselect" selected="selected">Lựa chọn nhà cung cấp
+													</option>
+													<option value=1>HP</option>
+													<option value=2>Apple</option>
+												</select>
+												<?php if (isset($error_id_list)) {
+													echo $error_id_list;
+												} ?>
+											</td>
+										</tr>
+										<tr>
+											<td><label>Giá sản phẩm</label><br /><input type="text"
+													name="price_product" /> VNĐ
+												<?php if (isset($error_price_product)) {
+													echo $error_price_product;
+												} ?>
+											</td>
+										</tr>
+										<tr>
+											<td><label>Sản phẩm đặc biệt</label><br />Có <input type="radio"
+													name="special" value=1 /> Không <input checked="checked"
+													type="radio" name="special" value=0 /></td>
+										</tr>
+										<tr>
+											<td><label>Thông tin chi tiết sản phẩm</label><br /><textarea cols="60"
+													rows="12" name="description_product"></textarea>
+												<?php if (isset($error_description_product)) {
+													echo $error_description_product;
+												} ?>
+											</td>
+										</tr>
+										<tr>
+											<td><input type="submit" name="submit" value="Thêm mới" /> <input
+													type="reset" name="reset" value="Làm mới" /></td>
+										</tr>
+									</table>
+								</form>
 							</div>
 						</div>
 					</div>
@@ -94,60 +120,55 @@
 		</div>
 	</div>
 
-<?php
+	<?php
 	$link = mysqli_connect('localhost', 'root', '', 'bkshop');
-    $error = NULL;
-    if(isset($_POST['submit'])){
-        // Bẫy lỗi để trống trường dữ liệu trong Form
-        // Tên Sản phẩm
-        if($_POST['name_product'] == ''){
-            $error_name_product = '<span style="color:red;">(*)<span>';
-        }
-        else{
-            $name_product = $_POST['name_product'];
-        }
-        // Giá Sản phẩm
-        if($_POST['price_product'] == ''){
-            $error_price_product = '<span style="color:red;">(*)<span>';
-        }
-        else{
-            $price_product = $_POST['price_product'];
-        }
-        // Chi tiết Sản phẩm
-        if($_POST['description_product'] == ''){
-            $error_description_product = '<span style="color:red;">(*)<span>';
-        }
-        else{
-            $description_product = $_POST['description_product'];
-        }
-        // Ảnh mô tả Sản phẩm
-        if($_FILES['image_product']['name'] == ''){
-            $error_anh_sp = '<span style="color:red;">(*)<span>';
-        }
-        else{
-            $image_product = $_FILES['image_product']['name'];
-            $tmp = $_FILES['image_product']['tmp_name'];
-        }
-        // Danh mục Sản phẩm
-        if($_POST['id_list'] == 'unselect'){
-            $error_id_list = '<span style="color:red;">(*)<span>';
-        }
-        else{
-            $id_list = $_POST['id_list'];
-        }
-        // Sản phẩm Đặc biệt
-        $special = $_POST['special'];
+	$error = NULL;
+	if (isset($_POST['submit'])) {
+		// Bẫy lỗi để trống trường dữ liệu trong Form
+		// Tên Sản phẩm
+		if ($_POST['name_product'] == '') {
+			$error_name_product = '<span style="color:red;">(*)<span>';
+		} else {
+			$name_product = $_POST['name_product'];
+		}
+		// Giá Sản phẩm
+		if ($_POST['price_product'] == '') {
+			$error_price_product = '<span style="color:red;">(*)<span>';
+		} else {
+			$price_product = $_POST['price_product'];
+		}
+		// Chi tiết Sản phẩm
+		if ($_POST['description_product'] == '') {
+			$error_description_product = '<span style="color:red;">(*)<span>';
+		} else {
+			$description_product = $_POST['description_product'];
+		}
+		// Ảnh mô tả Sản phẩm
+		if ($_FILES['image_product']['name'] == '') {
+			$error_anh_sp = '<span style="color:red;">(*)<span>';
+		} else {
+			$image_product = $_FILES['image_product']['name'];
+			$tmp = $_FILES['image_product']['tmp_name'];
+		}
+		// Danh mục Sản phẩm
+		if ($_POST['id_list'] == 'unselect') {
+			$error_id_list = '<span style="color:red;">(*)<span>';
+		} else {
+			$id_list = $_POST['id_list'];
+		}
+		// Sản phẩm Đặc biệt
+		$special = $_POST['special'];
 
-        if(isset($name_product) && isset($price_product) && isset($description_product) && isset($image_product) && isset($id_list) && isset($special)){
+		if (isset($name_product) && isset($price_product) && isset($description_product) && isset($image_product) && isset($id_list) && isset($special)) {
 
-            move_uploaded_file($tmp, 'img/'.$image_product);
-            $sql = "INSERT INTO product (name_product,price_product,description_product,image_product,id_list,special) VALUES ('$name_product','$price_product','$description_product','$image_product','$id_list','$special')";
-            $query = mysqli_query($link, $sql);
-            header('location: ../../index.php?action=view_product');
-        }
-        header('location: ../../index.php?action=view_product');
-    }
-?>
+			move_uploaded_file($tmp, 'img/' . $image_product);
+			$sql = "INSERT INTO product (name_product,price_product,description_product,image_product,id_list,special) VALUES ('$name_product','$price_product','$description_product','$image_product','$id_list','$special')";
+			$query = mysqli_query($link, $sql);
+			header('location: ../../index.php?action=view_product');
+		}
+		header('location: ../../index.php?action=view_product');
+	}
+	?>
 
 
 	<?php include 'footer.php'; ?>
