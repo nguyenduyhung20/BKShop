@@ -38,7 +38,8 @@
 								Settings</a> -->
 							<?php if ($authService->getLoggedInUser()->getRole() == 'ADMIN') { ?>
 								<a href="/admin" class="list-group-item list-group-item-action">View Users</a>
-								<a href="index.php?action=view_product" class="list-group-item list-group-item-action">View Products</a>
+								<a href="index.php?action=view_product" class="list-group-item list-group-item-action">View
+									Products</a>
 							<?php } ?>
 							<a href="/profile/delete_account" class="list-group-item list-group-item-action">Delete
 								Account</a>
@@ -66,30 +67,42 @@
 									</thead>
 									<tbody>
 										<?php
-										    $link = mysqli_connect('localhost', 'root', '', 'bkshop');
-										     if(isset($_GET['page'])){
-										            $page = $_GET['page'];
-										        }else{
-										            $page = 1;
-										        }
-										        $rowsPerPage = 10;
-										        $perRow = $page*$rowsPerPage-$rowsPerPage;
-										    $sql = "SELECT * FROM product INNER JOIN list_product ON product.id_list = list_product.id_list LIMIT $perRow, $rowsPerPage";
-										    $query = mysqli_query($link, $sql);
-										    while($row = mysqli_fetch_assoc($query)){
+										$link = mysqli_connect('localhost', 'root', '', 'bkshop');
+										if (isset($_GET['page'])) {
+											$page = $_GET['page'];
+										} else {
+											$page = 1;
+										}
+										$rowsPerPage = 10;
+										$perRow = $page * $rowsPerPage - $rowsPerPage;
+										$sql = "SELECT * FROM product INNER JOIN list_product ON product.id_list = list_product.id_list LIMIT $perRow, $rowsPerPage";
+										$query = mysqli_query($link, $sql);
+										while ($row = mysqli_fetch_assoc($query)) {
+											?>
+											<tr>
+												<td>
+													<?php echo $row['id_product']; ?>
+												</td>
+												<td><a href="#">
+														<?php echo $row['name_product']; ?>
+													</a></td>
+												<td>
+													<?php echo $row['price_product']; ?>
+												</td>
+												<td>
+													<?php echo $row['name_list'] ?>
+												</td>
+												<td><img width="60" src="/img/<?php echo $row['image_product']; ?>" /></td>
+												<td><a
+														href="index.php?action=edit_product&id_product=<?php echo $row['id_product']; ?>"><span>Edit</span></a>
+												</td>
+												<td><a
+														href="index.php?action=delete_product&id_product=<?php echo $row['id_product']; ?>"><span>Delete</span></a>
+												</td>
+											</tr>
+											<?php
+										}
 										?>
-										<tr>
-								        	<td><?php echo $row['id_product'];?></td>
-								            <td ><a href="#"><?php echo $row['name_product'];?></a></td>
-								            <td ><?php echo $row['price_product'];?></td>
-								            <td><?php echo $row['name_list']?></td>
-								            <td><img width="60" src="img/<?php echo $row['image_product'];?>" /></td>
-								            <td><a href="index.php?action=edit_product&id_product=<?php echo $row['id_product'];?>"><span>Edit</span></a></td>
-								            <td><a href="index.php?action=delete_product&id_product=<?php echo $row['id_product'];?>"><span>Delete</span></a></td>
-								        </tr>
-								        <?php
-								        }
-								        ?>
 									</tbody>
 								</table>
 							</div>
