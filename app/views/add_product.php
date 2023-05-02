@@ -53,61 +53,68 @@
 							</div>
 							<div class="card-body">
 								<form method="post" enctype="multipart/form-data">
-									<table id="add-prd" border="0" cellpadding="0" cellspacing="0">
-										<tr>
-											<td><label>Tên sản phẩm</label><br /><input type="text"
-													name="name_product" />
-												<?php if (isset($error_name_product)) {
-													echo $error_name_product;
-												} ?>
-											</td>
-										</tr>
-										<tr>
-											<td><label>Ảnh mô tả</label><br /><input type="file" name="image_product" />
-												<?php if (isset($error_image_product)) {
-													echo $error_image_product;
-												} ?>
-											</td>
-										</tr>
-										<tr>
-											<td><label>Nhà cung cấp</label><br />
-												<select name="id_list">
-													<option value="unselect" selected="selected">Lựa chọn nhà cung cấp
-													</option>
-													<option value=1>HP</option>
-													<option value=2>Apple</option>
-												</select>
-												<?php if (isset($error_id_list)) {
-													echo $error_id_list;
-												} ?>
-											</td>
-										</tr>
-										<tr>
-											<td><label>Giá sản phẩm</label><br /><input type="text"
-													name="price_product" /> VNĐ
-												<?php if (isset($error_price_product)) {
-													echo $error_price_product;
-												} ?>
-											</td>
-										</tr>
-										<tr>
-											<td><label>Sản phẩm đặc biệt</label><br />Có <input type="radio"
-													name="special" value=1 /> Không <input checked="checked"
-													type="radio" name="special" value=0 /></td>
-										</tr>
-										<tr>
-											<td><label>Thông tin chi tiết sản phẩm</label><br /><textarea cols="60"
-													rows="12" name="description_product"></textarea>
-												<?php if (isset($error_description_product)) {
-													echo $error_description_product;
-												} ?>
-											</td>
-										</tr>
-										<tr>
-											<td><input type="submit" name="submit" value="Thêm mới" /> <input
-													type="reset" name="reset" value="Làm mới" /></td>
-										</tr>
-									</table>
+									<div class="form-group">
+										<label for="name_product">Tên sản phẩm</label>
+										<input type="text" class="form-control" id="name_product" name="name_product">
+										<?php if (isset($error_name_product)) {
+											echo $error_name_product;
+										} ?>
+									</div>
+									<div class="form-group">
+										<label for="image_product">Ảnh mô tả</label>
+										<input type="file" class="form-control-file" id="image_product"
+											name="image_product">
+										<?php if (isset($error_image_product)) {
+											echo $error_image_product;
+										} ?>
+									</div>
+									<div class="form-group">
+										<label for="id_list">Nhà cung cấp</label>
+										<select class="form-control" id="id_list" name="id_list">
+											<option value="unselect" selected="selected">Lựa chọn nhà cung cấp</option>
+											<option value=1>HP</option>
+											<option value=2>Apple</option>
+										</select>
+										<?php if (isset($error_id_list)) {
+											echo $error_id_list;
+										} ?>
+									</div>
+									<div class="form-group">
+										<label for="price_product">Giá sản phẩm</label>
+										<div class="input-group">
+											<input type="text" class="form-control" id="price_product"
+												name="price_product">
+											<div class="input-group-append">
+												<span class="input-group-text">VNĐ</span>
+											</div>
+										</div>
+										<?php if (isset($error_price_product)) {
+											echo $error_price_product;
+										} ?>
+									</div>
+									<div class="form-group">
+										<label>Sản phẩm đặc biệt</label><br />
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="special" id="special_yes"
+												value=1>
+											<label class="form-check-label" for="special_yes">Có</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="special" id="special_no"
+												value=0 checked>
+											<label class="form-check-label" for="special_no">Không</label>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="description_product">Thông tin chi tiết sản phẩm</label>
+										<textarea class="form-control" id="description_product"
+											name="description_product" rows="12"></textarea>
+										<?php if (isset($error_description_product)) {
+											echo $error_description_product;
+										} ?>
+									</div>
+									<button type="submit" class="btn btn-primary" name="submit">Thêm mới</button>
+									<button type="reset" class="btn btn-secondary" name="reset">Làm mới</button>
 								</form>
 							</div>
 						</div>
