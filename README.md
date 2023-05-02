@@ -2,6 +2,10 @@
 
 BKShop is an online computer gear store, built using PHP 7.0+, HTML5/CSS3, JavaScript, and MySQL. The project is a result of a university assignment that required students to create a company/business website with responsive design, web application security, and SEO.
 
+## Overview
+
+![](https://github.com/duyhung8a2/BKShop/blob/main/screenshot/Screenshot%202023-05-03%20014718.png)
+
 ## Features
 
 - Responsive design, compatible with various devices and screen sizes
