@@ -36,13 +36,6 @@ BKShop is an online computer gear store, built using PHP 7.0+, HTML5/CSS3, JavaS
 - CSS3 and JavaScript libraries/frameworks are allowed
 - No PHP frameworks, CMF, or CMS should be used
 
-## Team Members
-
-- Member 1
-- Member 2
-- Member 3
-- Member 4
-
 ## Instructions
 
 1. Clone the repository or download the source code
