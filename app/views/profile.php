@@ -39,6 +39,8 @@
                                 Settings</a> -->
                             <?php if ($authService->getLoggedInUser()->getRole() == 'ADMIN') { ?>
                                 <a href="/admin" class="list-group-item list-group-item-action">View Users</a>
+                                <a href="/index.php?action=view_product" class="list-group-item list-group-item-action">View
+                                    Products</a>
                             <?php } ?>
                             <a href="/profile/delete_account" class="list-group-item list-group-item-action">Delete
                                 Account</a>

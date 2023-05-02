@@ -27,6 +27,18 @@ if (isset($_GET['action'])) {
     } elseif ($_GET['action'] == 'dashboard') {
         require_once 'app/views/dashboard.php';
         exit;
+    } elseif ($_GET['action'] == 'view_product') {
+        require_once 'app/views/view_product.php';
+        exit;
+    } elseif ($_GET['action'] == 'edit_product') {
+        require_once 'app/views/edit_product.php';
+        exit;
+    } elseif ($_GET['action'] == 'delete_product') {
+        require_once 'app/views/delete_product.php';
+        exit;
+    } elseif ($_GET['action'] == 'add_product') {
+        require_once 'app/views/add_product.php';
+        exit;
     } elseif ($_GET['action'] == 'view_user') {
         $adminController->index();
         exit;
@@ -56,6 +68,9 @@ if (isset($_GET['action'])) {
         exit;
     } elseif ($_GET['action'] == 'cart') {
         require_once 'app/views/cart.php';
+        exit;
+    } elseif ($_GET['action'] == 'detail') {
+        require_once 'app/views/detail.php';
         exit;
     } elseif ($_GET['action'] == 'profile') {
         $userController->profile();

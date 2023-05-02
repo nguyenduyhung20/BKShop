@@ -215,6 +215,13 @@
 .product .btn{
 	margin: 5px;
 }
+.cmt ul{
+    list-style: none;
+}
+.com form ul {
+    list-style: none;
+    padding-left: 20px;
+}
 /* Footer */
 footer {
 	padding: 15px;

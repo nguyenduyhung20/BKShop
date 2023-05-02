@@ -173,66 +173,21 @@
             <a style="float:right; text-decoration: none; color: white;" href="/list">Xem tất cả ></a>
         </div>
         <div class="d-flex flex-wrap justify-content-around">
+        <?php
+            $link = mysqli_connect("localhost","root","","bkshop");
+            $sql = "SELECT * FROM product ORDER BY id_product DESC LIMIT 6";
+            $query = mysqli_query($link, $sql);
+            while($row = mysqli_fetch_assoc($query)){
+        ?>
             <div class="product col-lg-3 col-md-5 col-sm-12">
-                <img src="img/hp1.jpg" alt="Product">
-                <p>HP AIO 22 dd2002d i5 1235U 21.5 inch (6K7G1PA)</p>
-                <p> Giá: 20.390.000Đ</p>
-                <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
+                <img src="img/<?php echo $row['image_product'] ?>" alt="Product">
+                <p><?php echo $row['name_product'] ?></p>
+                <p> Giá: <?php echo $row['price_product'] ?>Đ</p>
+                <a href="index.php?action=detail&id_product=<?php echo $row['id_product']?>" class="btn btn-outline-primary">Đặt mua</a>
             </div>
-            <div class="product col-lg-3 col-md-5 col-sm-12">
-                <img src="img/imac1.jpg" alt="Product">
-                <p>iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU (MGPK3SA/A) </p>
-                <p> Giá: 27.990.000Đ</p>
-                <a href="" class="btn btn-outline-primary">Đặt mua</a>
-            </div>
-            <div class="product col-lg-3 col-md-5 col-sm-12">
-                <img src="img/hp1.jpg" alt="Product">
-                <p>HP AIO 22 dd2002d i5 1235U 21.5 inch (6K7G1PA)</p>
-                <p> Giá: 20.390.000Đ</p>
-                <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
-            </div>
-            <div class="product col-lg-3 col-md-5 col-sm-12">
-                <img src="img/imac1.jpg" alt="Product">
-                <p>iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU (MGPK3SA/A) </p>
-                <p> Giá: 27.990.000Đ</p>
-                <a href="" class="btn btn-outline-primary">Đặt mua</a>
-            </div>
-            <div class="product col-lg-3 col-md-5 col-sm-12">
-                <img src="img/hp1.jpg" alt="Product">
-                <p>HP AIO 22 dd2002d i5 1235U 21.5 inch (6K7G1PA)</p>
-                <p> Giá: 20.390.000Đ</p>
-                <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
-            </div>
-            <div class="product col-lg-3 col-md-5 col-sm-12">
-                <img src="img/imac1.jpg" alt="Product">
-                <p>iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU (MGPK3SA/A) </p>
-                <p> Giá: 27.990.000Đ</p>
-                <a href="" class="btn btn-outline-primary">Đặt mua</a>
-            </div>
-            <div class="product col-lg-3 col-md-5 col-sm-12">
-                <img src="img/hp1.jpg" alt="Product">
-                <p>HP AIO 22 dd2002d i5 1235U 21.5 inch (6K7G1PA)</p>
-                <p> Giá: 20.390.000Đ</p>
-                <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
-            </div>
-            <div class="product col-lg-3 col-md-5 col-sm-12">
-                <img src="img/imac1.jpg" alt="Product">
-                <p>iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU (MGPK3SA/A) </p>
-                <p> Giá: 27.990.000Đ</p>
-                <a href="" class="btn btn-outline-primary">Đặt mua</a>
-            </div>
-            <div class="product col-lg-3 col-md-5 col-sm-12">
-                <img src="img/hp1.jpg" alt="Product">
-                <p>HP AIO 22 dd2002d i5 1235U 21.5 inch (6K7G1PA)</p>
-                <p> Giá: 20.390.000Đ</p>
-                <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
-            </div>
-            <div class="product col-lg-3 col-md-5 col-sm-12">
-                <img src="img/imac1.jpg" alt="Product">
-                <p>iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU (MGPK3SA/A) </p>
-                <p> Giá: 27.990.000Đ</p>
-                <a href="" class="btn btn-outline-primary">Đặt mua</a>
-            </div>
+        <?php
+            }
+        ?>
         </div>
     </div>
     <footer class="bg-primary">

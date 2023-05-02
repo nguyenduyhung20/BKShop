@@ -160,13 +160,20 @@
                 <li class="breadcrumb-item active" aria-current="page">PC</li>
             </ol>
         </nav>
+        <?php
+            $link = mysqli_connect("localhost","root","","bkshop");
+            $id_product = $_GET['id_product'];
+            $sql = "SELECT * FROM product WHERE id_product = $id_product";
+            $query = mysqli_query($link, $sql);
+            $row = mysqli_fetch_assoc($query);
+        ?>
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-5" style="margin-top: 10px">
-                <img src="img/hp1.jpg" alt="main_pic" width="80%" height="450px">
+                <img src="img/<?php echo $row['image_product'] ?>" alt="main_pic" width="80%" height="450px">
             </div>
             <div class="col-md-6" style="margin-top: 10px">
-                <h2 class="product-name">HP AIO 22 dd2002d i5 1235U 21.5 inch (6K7G1PA)</h2>
+                <h2 class="product-name"><?php echo $row['name_product'] ?></h2>
                 <ul style="list-style:none;">
                     <li style="margin-bottom:10px;">
                         <span style="color:#FFBF1B;">
@@ -188,48 +195,19 @@
                     <li><span style="font-weight:600;">FREEship</span> đơn hàng từ 300.000đ hoặc thành viên VÀNG</li>
                     <li>Giao nhanh trong 2 giờ</li>
                 </ul>
-                <p class="price"> GIÁ BÁN: <span style="color: rgb(17, 17, 136);">20.390.000Đ</span></p>
+                <p class="price"> GIÁ BÁN: <span style="color: rgb(17, 17, 136);"><?php echo $row['price_product'] ?>Đ</span></p>
                 <div style="display:flex; justify-content:flex-start;">
                     <button type="button" class="btn buy-now">
                         MUA NGAY
                     </button>
-                    <button type="button" class="btn add-cart">THÊM VÀO GIỎ HÀNG</button>
+                    <button type="button" class="btn add-cart"><a href="app/views/add_cart.php?id_product=<?php echo $row['id_product'] ?>">THÊM VÀO GIỎ HÀNG</a></p></button>
                 </div>
             </div>
         </div>
         <div class="row mx-2 mt-4">
             <div class="col-md-8 PI1">
                 <h4 class="py-3"> THÔNG TIN SẢN PHẨM</h4>
-                <p>Nếu bạn đang cần một trợ thủ đắc lực sở hữu đầy đủ mọi ưu điểm từ cấu hình mạnh mẽ đến
-                    màn hình lớn, ngoại hình đẹp mắt, máy tính để bàn HP AIO 22 dd2002d i5 (6K7G1PA) sẽ là sản phẩm
-                    All-in-one
-                    mà bạn không nên bỏ lỡ, cực kỳ phù hợp cho mọi đối tượng là sinh viên, dân văn phòng hay
-                    thậm chí là người dùng sáng tạo.</p>
-                <p>Mang trên mình bộ vi xử lý Intel Core i5 1235U mạnh mẽ kết hợp với card Intel UHD
-                    Graphics giúp bạn vận hành tốt mọi tác vụ học tập - văn phòng từ cơ bản đến nâng cao hay
-                    chỉnh sửa hình ảnh, giải trí với các tựa game nhẹ nhàng. Nếu muốn xử lý khối lượng công
-                    việc nhiều hơn, bạn hoàn toàn có thể lắp thêm thanh RAM khác và kích hoạt Dual-Channel để
-                    nâng cấp lên card Iris Xe.</p>
-                <p>Bộ nhớ RAM 8 GB cho phép người dùng xử lý công việc trên nhiều cửa sổ ứng dụng cùng lúc
-                    nhưng vẫn đảm bảo trơn tru, hạn chế tình trạng giật lag. Ổ cứng 512 GB SSD mang đến không
-                    gian lưu trữ ổn định khi tải các tệp tài liệu, học tập cần thiết đồng thời gia tăng tốc độ
-                    khởi động máy chỉ trong vài giây.</p>
-                <p>Làm việc tốt hơn trên kích thước màn hình 21.5 inch cho phép bạn quan sát bao quát nội
-                    dung được hiển thị trên máy, độ sáng 250 nits cùng độ phân giải Full HD (1920 x 1080) cung
-                    cấp chất lượng khung ảnh sắc nét ở nhiều điều kiện ánh sáng khác nhau với gam màu sắc chuẩn
-                    xác trên từng chi tiết. Thời gian làm việc trên máy lâu dài nhưng vẫn bảo vệ tốt cho thị lực
-                    của người dùng nhờ màn hình Anti Glare, giảm thiểu độ chói sáng ở những nơi ánh sáng cao.</p>
-                <p>Công nghệ High Definition (HD) Audio cho chất âm to rõ, chân thực trên từng thước phim hay bản nhạc.
-                </p>
-                <p>Máy tính để bàn học tập được bao bọc bởi chiếc áo màu trắng tinh khôi, toát lên vẻ đẹp
-                    tinh tế và sang trọng khi đặt ở mọi vị trí khác nhau, cân nặng 5.7 kg dễ dàng bưng bê và lắp
-                    đặt cố định ở không gian văn phòng, bàn lễ tân nhà hàng, khách sạn,...</p>
-                <p>Tính năng mở khóa bằng khuôn mặt tích hợp với Camera IR hồng ngoại hiện đại được trang bị
-                    trên chiếc máy tính để bàn này giúp bạn mở khóa nhanh chóng và an toàn hơn rất nhiều so với
-                    các kiểu bảo mật truyền thống dù ở những nơi có điều kiện ánh sáng thấp.</p>
-                <p>Mặt sau máy tính để bàn HP được trang bị đa dạng các cổng kết nối như USB 2.0, Jack 3.5 mm,
-                    LAN (RJ45), HDMI và USB 3.2 cho khả năng kết xuất và truyền tải dữ liệu đến các thiết bị ngoại
-                    vi nhanh chóng, dễ dàng hơn.
+                <p><?php echo $row['description_product'] ?></p>
             </div>
             <div class="col-md-4">
                 <h4 class="py-4">THÔNG SỐ KỸ THUẬT</h4>
@@ -271,6 +249,17 @@
                 </table>
             </div>
         </div>
+        <?php
+            if(isset($_POST['submit'])){
+                $username = $_POST['username'];
+                $phone = $_POST['phone'];
+                $comment = $_POST['comment'];
+                date_default_timezone_set('Asia/SaiGon');
+                $time = date('Y-m-d H:i:s');
+                $sql0 = "INSERT INTO comment_product (id_product,username,phone,comment,time) VALUES ($id_product,'$username','$phone','$comment','$time')";
+                $query0 = mysqli_query($link, $sql0);
+            }
+        ?>
         <div class="d-flex justify-content-between mx-2 my-4 pb-3 border-bottom">
             <div class="col-md-8 border rounded mr-3">
                 <h4 class="py-3">ĐÁNH GIÁ SẢN PHẨM</h4>
@@ -291,40 +280,60 @@
                         <textarea class="form-control" id="evaluate" rows="4"></textarea>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 border rounded">
-                <h4 class="py-3">BÌNH LUẬN CỦA BẠN</h4>
-                <div class="form-group">
-                    <textarea class="form-control" id="evaluate" rows="6"></textarea>
+
+                <div class="row mb-3 cmt">
+                    <h4 class="py-3" style="padding-left: 15px;">BÌNH LUẬN SẢN PHẨM</h4>
+                    <?php
+                        $sql1 = "SELECT * FROM comment_product WHERE id_product = $id_product";
+                        $query1 = mysqli_query($link, $sql1);
+                        while($row1 = mysqli_fetch_assoc($query1)){
+                    ?>
+                    <ul>
+                        <li class="com-title"><?php echo $row1['username'] ?><br />
+                        <span>
+                            <?php
+                                $oriDate = $row1['time'];
+                                $newDate = date('d-m-Y H:i:s',strtotime($oriDate));
+                                echo $newDate;
+                            ?>
+                        </span></li>
+                        <li class="com-details"><?php
+                            echo $row1['comment'];
+                        ?></li>
+                    </ul>
+                    <?php
+                        }
+                    ?>
                 </div>
+            </div>
+            <div class="col-md-4 border rounded com">
+                <h4 class="py-3">BÌNH LUẬN CỦA BẠN</h4>
+                <form method="post">
+                    <ul>
+                        <li class="required text-dark">Tên <br><input class="form-control" required type="text" name="username" /></li>
+                        <li class="required text-dark">Số điện thoại <br><input class="form-control" required type="text" name="phone" /></li>
+                        <li class="required text-dark">Nội dung <br><textarea class="form-control" required name="comment"></textarea></li>
+                        <li><button class="btn btn-outline-secondary" type="submit" name="submit">Bình luận</button></li>
+                    </ul>
+                </form>
             </div>
         </div>
         <h4 class="pl-4">CÓ THỂ BẠN THÍCH</h4>
         <div class="d-flex">
+            <?php
+                $sql2 = "SELECT * FROM product ORDER BY id_product DESC LIMIT 6";
+                $query2 = mysqli_query($link, $sql2);
+                while($row2 = mysqli_fetch_assoc($query2)){ 
+            ?>
             <div class="product col-md-2">
-                <img src="img/imac1.jpg" alt="Product">
-                <p>iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU (MGPK3SA/A) </p>
-                <p>Giá: 27.990.000Đ</p>
-                <a href="" class="btn btn-outline-primary">Đặt mua</a>
+                <img src="img/<?php echo $row2['image_product'] ?>" alt="Product">
+                <p><?php echo $row2['name_product'] ?></p>
+                <p>Giá: <?php echo $row2['price_product'] ?>Đ</p>
+                <a href="index.php?action=detail&id_product=<?php echo $row2['id_product']?>" class="btn btn-outline-primary">Đặt mua</a>
             </div>
-            <div class="product col-md-2">
-                <img src="img/imac1.jpg" alt="Product">
-                <p>iMac 24 inch M1 2021 4.5K/7-core GPU</p>
-                <p> Giá: 23.990.000Đ</p>
-                <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
-            </div>
-            <div class="product col-md-2">
-                <img src="img/imac1.jpg" alt="Product">
-                <p>iMac 24 inch M1 2021 4.5K/7-core GPU</p>
-                <p> Giá: 23.990.000Đ</p>
-                <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
-            </div>
-            <div class="product col-md-2">
-                <img src="img/imac1.jpg" alt="Product">
-                <p>iMac 24 inch M1 2021 4.5K/7-core GPU</p>
-                <p> Giá: 23.990.000Đ</p>
-                <a href="detail.php" class="btn btn-outline-primary">Đặt mua</a>
-            </div>
+            <?php
+                } 
+            ?>
         </div>
     </div>
     <footer class="bg-primary">
